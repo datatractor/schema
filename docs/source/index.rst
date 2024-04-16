@@ -1,9 +1,14 @@
-MaRDA Metadata Extractors Schema
-================================
+datatractor schema
+==================
 
-A repository at |MMESchemaRepo|_, containing the |LinkML|_-based schemas backing the |MMERegistryRepo|_.
+A repository at |schemarepo|_, containing the |LinkML|_-based schemas backing the |yardrepo|_.
 
-The schemas implemented here are machine-actionable. They are used by the `Registry <https://marda-registry.fly.dev/>`_ to validate entries; a reference implementation demonstrating their pracical use is shown in the |MMEAPIRepo|_.
+The schemas implemented here are machine-actionable. They are used by the `Registry <https://marda-registry.fly.dev/>`_ to validate entries; a reference implementation demonstrating their pracical use is shown in the |beamrepo|_.
+
+.. note::
+
+   This work is a continuation of the MaRDA WG7 on Automated `Metadata Extractors
+   <https://www.marda-alliance.org/working-group/wg7-automated-metadata-extractors/>`_.
 
 Contents
 ````````
@@ -26,8 +31,8 @@ The repository contains a schema two user-facing classes:
    :caption: Schema Docs
    :hidden:
 
-   mme_schema/FileType
-   mme_schema/Extractor
+   datatractor_schema/FileType
+   datatractor_schema/Extractor
 
 .. toctree::
    :maxdepth: 3
@@ -35,21 +40,21 @@ The repository contains a schema two user-facing classes:
    :hidden:
    :glob:
 
-   mme_schema/index
+   datatractor_schema/index
 
 
 
-.. |MMESchemaRepo| image:: https://badgen.net/static/marda-alliance/metadata_extractors_schema/?icon=github
+.. |schemarepo| image:: https://badgen.net/static/datatractor/schema/?icon=github
 
-.. _MMESchemaRepo: https://github.com/marda-alliance/metadata_extractors_schema/
+.. _schemarepo: https://github.com/datatractor/schema/
 
-.. |MMERegistryRepo| image:: https://badgen.net/static/marda-alliance/metadata_extractors_registry/?icon=github
+.. |yardrepo| image:: https://badgen.net/static/datatractor/yard/?icon=github
 
-.. _MMERegistryRepo: https://github.com/marda-alliance/metadata_extractors_registry/
+.. _yardrepo: https://github.com/datatractor/yard/
 
-.. |MMEAPIRepo| image:: https://badgen.net/static/marda-alliance/metadata_extractors_api/?icon=github
+.. |beamrepo| image:: https://badgen.net/static/datatractor/beam/?icon=github
 
-.. _MMEAPIRepo: https://github.com/marda-alliance/metadata_extractors_api/
+.. _MMEAPIRepo: https://github.com/datatractor/beam/
 
 .. |LinkML| replace:: :mod:`LinkML`
 
@@ -57,8 +62,8 @@ The repository contains a schema two user-facing classes:
 
 .. |FileType| replace:: :class:`FileType`
 
-.. _FileType: mme_schema/FileType.html#class-filetype
+.. _FileType: datatractor_schema/FileType.html#class-filetype
 
 .. |Extractor| replace:: :class:`Extractor`
 
-.. _Extractor: mme_schema/Extractor.html#class-extractor
+.. _Extractor: datatractor_schema/Extractor.html#class-extractor

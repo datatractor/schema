@@ -1,16 +1,16 @@
-Usage of MaRDA Metadata Extractors Schema
-=========================================
+Usage of datatractor schema
+===========================
 
 Usage example
 -------------
 
-This repository is intended to be used as a |git submodule|_ to be cloned and used by your downstream code. As an example, we may look at the |MME Registry|_:
+This repository is intended to be used as a |git submodule|_ to be cloned and used by your downstream code. As an example, we may look at the |yard|_:
 
 .. figure:: images/registry.screenshot.PNG
-   :target: https://github.com/marda-alliance/metadata_extractors_registry
-   :alt: A screenshot of the MaRDA Metadata Extractors Registry showing "schemas" as a link to another repository.
+   :target: https://github.com/datatractor/yard
+   :alt: A screenshot of the datatractor yard showing "schemas" as a link to another repository.
 
-   A screenshot of |MME Registry|. Note that ``schemas`` is a ``git submodule``, pointing to the Schema repository at a certain commit (here: |c03a732|_, corresponding to the 0.2 release).
+   A screenshot of |yard|. Note that ``schemas`` is a ``git submodule``, pointing to the Schema repository at a certain commit (here: |c03a732|_, corresponding to the 1.0 release).
 
 After initializing and updating the submodule, the yaml files defining the |FileType|_ and |Extractor|_ schemas are available in the ``<submodule>/schemas/`` directory.
 
@@ -45,20 +45,20 @@ The |LinkML|_ schemas provided here can be automatically translated to other for
     gen-python <submodule>/schemas/filetype.yml >> filetype.py
     gen-pydantic <submodule>/schemas/filetype.yml >> filetype.py
 
-The generated files are intended to be used in downstream codes such as in the `validation function <https://github.com/marda-alliance/metadata_extractors_registry/blob/main/tasks.py#L33>`_ of the |MME Registry|_.
+The generated files are intended to be used in downstream codes such as in the `validation function <https://github.com/datatractor/yard/blob/main/tasks.py#L33>`_ of the |yard|_.
 
 
 .. |git submodule| replace:: ``git submodule``
 
 .. _git submodule: https://git-scm.com/book/en/v2/Git-Tools-Submodules
 
-.. |MME Registry| replace:: MaRDA Metadata Extractors Registry
+.. |yard| replace:: datatractor yard
 
-.. _MME Registry: https://github.com/marda-alliance/metadata_extractors_registry
+.. _yard: https://github.com/datatractor/yard
 
 .. |c03a732| replace:: ``c03a732``
 
-.. _c03a732: https://github.com/marda-alliance/metadata_extractors_schema/commit/c03a732a217312398fd470f491271670c9cecb66
+.. _c03a732: https://github.com/datatractor/yard/commit/c03a732a217312398fd470f491271670c9cecb66
 
 .. |LinkML| replace:: :mod:`LinkML`
 
@@ -66,15 +66,15 @@ The generated files are intended to be used in downstream codes such as in the `
 
 .. |FileType| replace:: :class:`FileType`
 
-.. _FileType: mme_schema/FileType.html#class-filetype
+.. _FileType: datatractor_schema/FileType.html#class-filetype
 
 .. |Extractor| replace:: :class:`Extractor`
 
-.. _Extractor: mme_schema/Extractor.html#class-extractor
+.. _Extractor: datatractor_schema/Extractor.html#class-extractor
 
 .. |examples| replace:: ``examples``
 
-.. _examples: https://github.com/marda-alliance/metadata_extractors_schema/tree/main/examples
+.. _examples: https://github.com/datatractor/schema/tree/main/examples
 
 .. |netcdf| replace:: :mod:`netcdf.yml`
 

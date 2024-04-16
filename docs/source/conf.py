@@ -19,9 +19,9 @@ version = "main"
 
 # -- Project information -----------------------------------------------------
 
-project = "MaRDA Metadata Extractors"
-copyright = "2022 - 2023, MaRDA Metadata Extractors Team"
-author = "Peter Kraus, Matthew Evans"
+project = "datatractor schema"
+copyright = "2022 - 2024, datatractor team"
+author = "Matthew Evans, Peter Kraus"
 release = version
 
 
@@ -70,8 +70,8 @@ html_theme_options = {
 }
 html_context = {
     "display_github": True,
-    "github_user": "marda-alliance",
-    "github_repo": "metadata_extractors_schema",
+    "github_user": "datatractor",
+    "github_repo": "schema",
     "github_version": version,
     "conf_py_path": "/docs/source/"
 }
