@@ -1,0 +1,75 @@
+# Slot: associated_vendors
+
+
+_A list of software or instrument vendors that can be associated with this particular `FileType`._
+
+
+
+URI: [schema_org:vendor](http://schema.org/vendor)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[FileType](FileType.md) | A specific encoding of data for storage purposes |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [String](String.md)
+
+* Multivalued: True
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://datatractor.github.io/schema/main/datatractor_schema/
+
+
+
+
+## LinkML Source
+
+<details>
+
+```yaml
+name: associated_vendors
+description: A list of software or instrument vendors that can be associated with
+  this particular `FileType`.
+from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+rank: 1000
+slot_uri: schema_org:vendor
+multivalued: true
+alias: associated_vendors
+owner: FileType
+domain_of:
+- FileType
+range: string
+
+```
+
+</details>

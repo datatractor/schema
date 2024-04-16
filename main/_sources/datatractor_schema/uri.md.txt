@@ -1,0 +1,56 @@
+# Slot: uri
+
+URI: [datatractor_schema:uri](https://datatractor.github.io/schema/main/datatractor_schema/uri)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Citation](Citation.md) | A container for a citation or another form of attribution for the parent reso... |  no  |
+[License](License.md) | A container for the licensing information related to the parent resource |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [String](String.md)
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+
+## LinkML Source
+
+<details>
+
+```yaml
+name: uri
+alias: uri
+domain_of:
+- Citation
+- License
+range: string
+
+```
+
+</details>

@@ -1,0 +1,74 @@
+# Slot: associated_software
+
+
+_A list of any known software (proprietary or otherwise) that produces such `FileType`._
+
+
+
+URI: [datatractor_schema:associated_software](https://datatractor.github.io/schema/main/datatractor_schema/associated_software)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[FileType](FileType.md) | A specific encoding of data for storage purposes |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [String](String.md)
+
+* Multivalued: True
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://datatractor.github.io/schema/main/datatractor_schema/
+
+
+
+
+## LinkML Source
+
+<details>
+
+```yaml
+name: associated_software
+description: A list of any known software (proprietary or otherwise) that produces
+  such `FileType`.
+from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+rank: 1000
+multivalued: true
+alias: associated_software
+owner: FileType
+domain_of:
+- FileType
+range: string
+
+```
+
+</details>

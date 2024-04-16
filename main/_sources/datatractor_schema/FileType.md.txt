@@ -1,0 +1,416 @@
+# Class: FileType
+
+
+_A specific encoding of data for storage purposes. A `FileType` is defined by a set of common characteristics and expectations, that can be assumed for all files of a given file type._
+
+
+
+
+
+URI: [datatractor_schema:FileType](https://datatractor.github.io/schema/main/datatractor_schema/FileType)
+
+
+
+```{mermaid}
+erDiagram
+FileType {
+    string id  
+    string description  
+    string name  
+    stringList subject  
+    stringList associated_vendors  
+    stringList associated_instruments  
+    stringList associated_software  
+    stringList associated_file_extensions  
+    stringList associated_standards  
+    stringList registered_extractors  
+}
+
+FileType ||--}o FileType : "base_formats"
+
+```
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+## Slots
+
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [id](id.md) | 1..1 <br/> [String](String.md) | A unique identifier for the entry within the datatractor yard namespace, this<br/>should be a shorthand label rather than a UUID. Only lower-case alphanumeric and<br/>dash ("-") characters are permitted. | direct |
+| [description](description.md) | 1..1 <br/> [String](String.md) | A human-readable outline of the entry, its format, data content and uses. | direct |
+| [name](name.md) | 1..1 <br/> [String](String.md) | A recognisable name for the entry. | direct |
+| [subject](subject.md) | 0..* <br/> [String](String.md) | Any keywords, phrases or classification codes that are relevant to the entry,<br/>e.g., particular scientific domains of applicability, or experimental<br/>techniques. | direct |
+| [associated_vendors](associated_vendors.md) | 0..* <br/> [String](String.md) | A list of software or instrument vendors that can be associated with this<br/>particular `FileType`. | direct |
+| [associated_instruments](associated_instruments.md) | 0..* <br/> [String](String.md) | A list of any instruments, or classes of instruments, that typically create the<br/>data encoded into this `FileType`. | direct |
+| [associated_software](associated_software.md) | 0..* <br/> [String](String.md) | A list of any known software (proprietary or otherwise) that produces such<br/>`FileType`. | direct |
+| [associated_file_extensions](associated_file_extensions.md) | 0..* <br/> [String](String.md) | A list of any known file extensions that files of this `FileType` are found<br/>with. These may be used as a hint for `FileType` detection. Should omit the<br/>leading `'.'`, e.g. 'json' or 'txt'. | direct |
+| [base_formats](base_formats.md) | 0..* <br/> [FileType](FileType.md) | A list of any particular underlying generic formats which this `FileType` is<br/>based on, e.g., CSV, JSON, HDF5, XML. | direct |
+| [associated_standards](associated_standards.md) | 0..* <br/> [String](String.md) | A list of any particular well-defined file format standards relevant to this<br/>`FileType`, e.g., CIF, NeXus, then it can be listed here. | direct |
+| [registered_extractors](registered_extractors.md) | 0..* <br/> [String](String.md) | A slot for an automatically-generated enumeration of `Extractor` IDs that<br/>support this file type. This slot should be auto-populated by a registry. | direct |
+
+
+
+
+
+## Usages
+
+| used by | used in | type | used |
+| ---  | --- | --- | --- |
+| [FileType](FileType.md) | [base_formats](base_formats.md) | range | [FileType](FileType.md) |
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://datatractor.github.io/schema/main/datatractor_schema/
+
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | datatractor_schema:FileType |
+| native | datatractor_schema:FileType |
+| close | schema_org:fileFormat, schema_org:encodingFormat |
+
+
+## Examples
+### Example: FileType-example
+
+```yaml
+---
+id: >-
+    example-filetype
+name: >-
+    Example Filetype
+description: >-
+    A binary data file with a random description. Can be multilined. It is just an
+    example.
+associated_vendors:
+    - Example Vendor
+subject:
+    - science
+    - engineering
+associated_instruments:
+    - Example Machine
+    - Bunch of Junk
+associated_file_extensions:
+    - dat
+    - txt
+    - tar.gz
+associated_software:
+    - Example Software
+    - Bitrot Software
+
+```
+### Example: FileType-netcdf
+
+```yaml
+---
+id: >-
+    netcdf
+name: >-
+    Network Common Data Form (NetCDF) file.
+description: >-
+    A file format for storing multidimensional scientific data (variables) such as
+    temperature, humidity, pressure, wind speed, and direction. This particular record
+    represents NetCDF version 4, which used HDF5+ as a container.
+associated_vendors:
+    - UCAR
+subject:
+    - climatology
+    - meteorology - oceanography
+associated_file_extensions:
+    - nc
+associated_software:
+    - ArcGIS
+    - OriginPro
+
+```
+
+
+
+
+## LinkML Source
+
+<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
+
+### Direct
+
+<details>
+
+```yaml
+name: FileType
+description: A specific encoding of data for storage purposes. A `FileType` is defined
+  by a set of common characteristics and expectations, that can be assumed for all
+  files of a given file type.
+from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+close_mappings:
+- schema_org:fileFormat
+- schema_org:encodingFormat
+rank: 1000
+slots:
+- id
+- description
+- name
+- subject
+attributes:
+  associated_vendors:
+    name: associated_vendors
+    description: A list of software or instrument vendors that can be associated with
+      this particular `FileType`.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    rank: 1000
+    slot_uri: schema_org:vendor
+    multivalued: true
+    domain_of:
+    - FileType
+  associated_instruments:
+    name: associated_instruments
+    description: A list of any instruments, or classes of instruments, that typically
+      create the data encoded into this `FileType`.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    rank: 1000
+    multivalued: true
+    domain_of:
+    - FileType
+  associated_software:
+    name: associated_software
+    description: A list of any known software (proprietary or otherwise) that produces
+      such `FileType`.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    rank: 1000
+    multivalued: true
+    domain_of:
+    - FileType
+  associated_file_extensions:
+    name: associated_file_extensions
+    description: A list of any known file extensions that files of this `FileType`
+      are found with. These may be used as a hint for `FileType` detection. Should
+      omit the leading `'.'`, e.g. 'json' or 'txt'.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    rank: 1000
+    multivalued: true
+    domain_of:
+    - FileType
+    pattern: ^[A-z,0-9]*[A-z,0-9,.]+[A-z,0-9]$
+  base_formats:
+    name: base_formats
+    description: A list of any particular underlying generic formats which this `FileType`
+      is based on, e.g., CSV, JSON, HDF5, XML.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    rank: 1000
+    multivalued: true
+    domain_of:
+    - FileType
+    range: FileType
+  associated_standards:
+    name: associated_standards
+    description: A list of any particular well-defined file format standards relevant
+      to this `FileType`, e.g., CIF, NeXus, then it can be listed here.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    rank: 1000
+    multivalued: true
+    domain_of:
+    - FileType
+  registered_extractors:
+    name: registered_extractors
+    description: A slot for an automatically-generated enumeration of `Extractor`
+      IDs that support this file type. This slot should be auto-populated by a registry.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    rank: 1000
+    multivalued: true
+    domain_of:
+    - FileType
+    pattern: ^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$
+
+```
+
+</details>
+
+### Induced
+
+<details>
+
+```yaml
+name: FileType
+description: A specific encoding of data for storage purposes. A `FileType` is defined
+  by a set of common characteristics and expectations, that can be assumed for all
+  files of a given file type.
+from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+close_mappings:
+- schema_org:fileFormat
+- schema_org:encodingFormat
+rank: 1000
+attributes:
+  associated_vendors:
+    name: associated_vendors
+    description: A list of software or instrument vendors that can be associated with
+      this particular `FileType`.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    rank: 1000
+    slot_uri: schema_org:vendor
+    multivalued: true
+    alias: associated_vendors
+    owner: FileType
+    domain_of:
+    - FileType
+    range: string
+  associated_instruments:
+    name: associated_instruments
+    description: A list of any instruments, or classes of instruments, that typically
+      create the data encoded into this `FileType`.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    rank: 1000
+    multivalued: true
+    alias: associated_instruments
+    owner: FileType
+    domain_of:
+    - FileType
+    range: string
+  associated_software:
+    name: associated_software
+    description: A list of any known software (proprietary or otherwise) that produces
+      such `FileType`.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    rank: 1000
+    multivalued: true
+    alias: associated_software
+    owner: FileType
+    domain_of:
+    - FileType
+    range: string
+  associated_file_extensions:
+    name: associated_file_extensions
+    description: A list of any known file extensions that files of this `FileType`
+      are found with. These may be used as a hint for `FileType` detection. Should
+      omit the leading `'.'`, e.g. 'json' or 'txt'.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    rank: 1000
+    multivalued: true
+    alias: associated_file_extensions
+    owner: FileType
+    domain_of:
+    - FileType
+    range: string
+    pattern: ^[A-z,0-9]*[A-z,0-9,.]+[A-z,0-9]$
+  base_formats:
+    name: base_formats
+    description: A list of any particular underlying generic formats which this `FileType`
+      is based on, e.g., CSV, JSON, HDF5, XML.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    rank: 1000
+    multivalued: true
+    alias: base_formats
+    owner: FileType
+    domain_of:
+    - FileType
+    range: FileType
+  associated_standards:
+    name: associated_standards
+    description: A list of any particular well-defined file format standards relevant
+      to this `FileType`, e.g., CIF, NeXus, then it can be listed here.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    rank: 1000
+    multivalued: true
+    alias: associated_standards
+    owner: FileType
+    domain_of:
+    - FileType
+    range: string
+  registered_extractors:
+    name: registered_extractors
+    description: A slot for an automatically-generated enumeration of `Extractor`
+      IDs that support this file type. This slot should be auto-populated by a registry.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    rank: 1000
+    multivalued: true
+    alias: registered_extractors
+    owner: FileType
+    domain_of:
+    - FileType
+    range: string
+    pattern: ^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$
+  id:
+    name: id
+    description: A unique identifier for the entry within the datatractor yard namespace,
+      this should be a shorthand label rather than a UUID. Only lower-case alphanumeric
+      and dash ("-") characters are permitted.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    rank: 1000
+    slot_uri: schema_org:identifier
+    identifier: true
+    alias: id
+    owner: FileType
+    domain_of:
+    - Extractor
+    - SupportedFileType
+    - FileType
+    range: string
+    required: true
+    pattern: ^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$
+  description:
+    name: description
+    description: A human-readable outline of the entry, its format, data content and
+      uses.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    rank: 1000
+    slot_uri: schema_org:description
+    alias: description
+    owner: FileType
+    domain_of:
+    - Extractor
+    - SupportedFileType
+    - FileType
+    range: string
+    required: true
+  name:
+    name: name
+    description: A recognisable name for the entry.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    rank: 1000
+    slot_uri: schema_org:name
+    alias: name
+    owner: FileType
+    domain_of:
+    - Extractor
+    - FileType
+    range: string
+    required: true
+  subject:
+    name: subject
+    description: Any keywords, phrases or classification codes that are relevant to
+      the entry, e.g., particular scientific domains of applicability, or experimental
+      techniques.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    rank: 1000
+    slot_uri: dc_terms:subject
+    multivalued: true
+    alias: subject
+    owner: FileType
+    domain_of:
+    - Extractor
+    - FileType
+    range: string
+
+```
+
+</details>

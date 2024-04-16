@@ -1,0 +1,246 @@
+# Class: Installation
+
+
+_A machine-actionable specification of a set of installation instructions for the parent `Extractor`._
+
+
+
+
+
+URI: [datatractor_schema:Installation](https://datatractor.github.io/schema/main/datatractor_schema/Installation)
+
+
+
+```{mermaid}
+erDiagram
+Installation {
+    InstallerTypes method  
+    string requires_python  
+    string requirements  
+    stringList packages  
+}
+
+
+
+```
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+## Slots
+
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [method](method.md) | 1..1 <br/> [InstallerTypes](InstallerTypes.md) | Extractor installer, specifying the package manager to process the installation<br/>instructions with. | direct |
+| [requires_python](requires_python.md) | 0..1 <br/> [String](String.md) | A PEP 440 version string for the version constraints on the Python version<br/>required for this extractor. | direct |
+| [requirements](requirements.md) | 0..1 <br/> [String](String.md) | Contents of a 'requirements.txt'-like file. Will be installed by the selected<br/>Installer using an appropriate method, e.g., `pip install -r requirements.txt`<br/>for pip, or `conda env create -f requirements.txt` for conda. | direct |
+| [packages](packages.md) | 0..* <br/> [String](String.md) | A list of packages, including versioned packages or `git+https://` targets, to<br/>be installed using the Installer. | direct |
+
+
+
+
+
+## Usages
+
+| used by | used in | type | used |
+| ---  | --- | --- | --- |
+| [Extractor](Extractor.md) | [installation](installation.md) | range | [Installation](Installation.md) |
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://datatractor.github.io/schema/main/datatractor_schema/
+
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | datatractor_schema:Installation |
+| native | datatractor_schema:Installation |
+
+
+## Examples
+### Example: Installation-pip_reqs
+
+```yaml
+---
+method: pip
+requirements: >-
+    linkml >= 1.5.2, < 1.6.2
+    linkml-runtime != 1.6.1
+    pre-commit ~= 2.20
+requires_python: '>=3.8'
+
+```
+### Example: Installation-conda_reqs
+
+```yaml
+---
+method: conda
+requirements: >-
+    dependencies:
+    - python=3.4
+    - numpy
+    - toolz
+    - matplotlib
+    - dill
+    - pandas
+    - partd
+    - bokeh
+    - pip:
+        - git+https://github.com/example/extractor.git#egg=example[all]
+
+```
+### Example: Installation-pip
+
+```yaml
+---
+method: pip
+packages:
+    - example-extractor
+requires_python: ==3.4
+
+```
+
+
+
+
+## LinkML Source
+
+<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
+
+### Direct
+
+<details>
+
+```yaml
+name: Installation
+description: A machine-actionable specification of a set of installation instructions
+  for the parent `Extractor`.
+from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+rank: 1000
+attributes:
+  method:
+    name: method
+    description: Extractor installer, specifying the package manager to process the
+      installation instructions with.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    domain_of:
+    - Usage
+    - Installation
+    range: InstallerTypes
+    required: true
+  requires_python:
+    name: requires_python
+    description: A PEP 440 version string for the version constraints on the Python
+      version required for this extractor.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    rank: 1000
+    domain_of:
+    - Installation
+    required: false
+  requirements:
+    name: requirements
+    description: Contents of a 'requirements.txt'-like file. Will be installed by
+      the selected Installer using an appropriate method, e.g., `pip install -r requirements.txt`
+      for pip, or `conda env create -f requirements.txt` for conda.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    rank: 1000
+    domain_of:
+    - Installation
+  packages:
+    name: packages
+    description: A list of packages, including versioned packages or `git+https://`
+      targets, to be installed using the Installer.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    rank: 1000
+    multivalued: true
+    domain_of:
+    - Installation
+
+```
+
+</details>
+
+### Induced
+
+<details>
+
+```yaml
+name: Installation
+description: A machine-actionable specification of a set of installation instructions
+  for the parent `Extractor`.
+from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+rank: 1000
+attributes:
+  method:
+    name: method
+    description: Extractor installer, specifying the package manager to process the
+      installation instructions with.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    alias: method
+    owner: Installation
+    domain_of:
+    - Usage
+    - Installation
+    range: InstallerTypes
+    required: true
+  requires_python:
+    name: requires_python
+    description: A PEP 440 version string for the version constraints on the Python
+      version required for this extractor.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    rank: 1000
+    alias: requires_python
+    owner: Installation
+    domain_of:
+    - Installation
+    range: string
+    required: false
+  requirements:
+    name: requirements
+    description: Contents of a 'requirements.txt'-like file. Will be installed by
+      the selected Installer using an appropriate method, e.g., `pip install -r requirements.txt`
+      for pip, or `conda env create -f requirements.txt` for conda.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    rank: 1000
+    alias: requirements
+    owner: Installation
+    domain_of:
+    - Installation
+    range: string
+  packages:
+    name: packages
+    description: A list of packages, including versioned packages or `git+https://`
+      targets, to be installed using the Installer.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    rank: 1000
+    multivalued: true
+    alias: packages
+    owner: Installation
+    domain_of:
+    - Installation
+    range: string
+
+```
+
+</details>

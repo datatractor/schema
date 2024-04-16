@@ -1,0 +1,87 @@
+# Slot: command
+
+
+_A machine-executable command by which the `Extractor` functionality can be accessed._
+
+
+
+## Comments
+
+* For `method: cli`, a parametrized executable invocation which should be available after installing the `Extractor`;
+* For `method: python`, a parametrized function invocation which should be available after installing and setting up the `Extractor`.
+* The templated parameters which can be requested from the user are [described by the `UsageTemplate` class](UsageTemplate.md).
+
+URI: [datatractor_schema:command](https://datatractor.github.io/schema/main/datatractor_schema/command)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Usage](Usage.md) | A machine-actionable specification of a set of usage instructions of the pare... |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [String](String.md)
+
+* Required: True
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://datatractor.github.io/schema/main/datatractor_schema/
+
+
+
+
+## LinkML Source
+
+<details>
+
+```yaml
+name: command
+description: A machine-executable command by which the `Extractor` functionality can
+  be accessed.
+comments:
+- 'For `method: cli`, a parametrized executable invocation which should be available
+  after installing the `Extractor`;'
+- 'For `method: python`, a parametrized function invocation which should be available
+  after installing and setting up the `Extractor`.'
+- The templated parameters which can be requested from the user are [described by
+  the `UsageTemplate` class](UsageTemplate.md).
+from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+rank: 1000
+alias: command
+owner: Usage
+domain_of:
+- Usage
+range: string
+required: true
+
+```
+
+</details>

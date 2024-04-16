@@ -1,0 +1,56 @@
+# Slot: method
+
+URI: [datatractor_schema:method](https://datatractor.github.io/schema/main/datatractor_schema/method)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Installation](Installation.md) | A machine-actionable specification of a set of installation instructions for ... |  no  |
+[Usage](Usage.md) | A machine-actionable specification of a set of usage instructions of the pare... |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [String](String.md)
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+
+## LinkML Source
+
+<details>
+
+```yaml
+name: method
+alias: method
+domain_of:
+- Usage
+- Installation
+range: string
+
+```
+
+</details>

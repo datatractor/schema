@@ -5,23 +5,24 @@ Contributions to this project are welcome. We pledge to follow the `Contributor 
 
 .. note::
 
-    If you wish to contribute a new :class:`FileType` or a new :class:`Extractor` to the `Registry <https://marda-registry.fly.dev/>`_, please open a pull request at |MMERegistryRepo|_.
+    If you wish to contribute a new :class:`FileType` or a new :class:`Extractor` to the `Registry <https://marda-registry.fly.dev/>`_, please open a pull request at |yardrepo|_.
 
-If you have any suggestions, technical queries, or a feature request related to the schemas, please do not hesitate to `open an issue <https://github.com/marda-alliance/metadata_extractors_schema/issues>`_ on |MMESchemaRepo|_.
+If you have any suggestions, technical queries, or a feature request related to the schemas, please do not hesitate to `open an issue <https://github.com/datatractor/schema/issues>`_ on |schemarepo|_.
 
-For general questions related to the MaRDA Metadata Extractors WG, please use the `discussion board on GitHub <https://github.com/marda-alliance/metadata_extractors/discussions>`_.
+For general questions related to the datatractor project, please use the `discussion board in the schema repo on GitHub <https://github.com/datatractor/schema/discussions>`_.
 
 Contributors
 ------------
 
 - Matthew Evans `@ml-evs <https://github.com/ml-evs>`_
 - Peter Kraus `@PeterKraus <https://github.com/PeterKraus>`_
+- David Elbert `@davidelbert <https://github.com/davidelbert>`
 
 
-.. |MMERegistryRepo| image:: https://badgen.net/static/marda-alliance/metadata_extractors_registry/?icon=github
+.. |schemarepo| image:: https://badgen.net/static/datatractor/schema/?icon=github
 
-.. _MMERegistryRepo: https://github.com/marda-alliance/metadata_extractors_registry/
+.. _schemarepo: https://github.com/datatractor/schema/
 
-.. |MMESchemaRepo| image:: https://badgen.net/static/marda-alliance/metadata_extractors_schema/?icon=github
+.. |yardrepo| image:: https://badgen.net/static/datatractor/yard/?icon=github
 
-.. _MMESchemaRepo: https://github.com/marda-alliance/metadata_extractors_schema/
+.. _yardrepo: https://github.com/datatractor/yard/

@@ -1,0 +1,72 @@
+# Slot: spdx
+
+
+_An SPDX License Identifier entry._
+
+
+
+URI: [dc_terms:identifier](http://purl.org/dc/terms/1.1/identifier)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[License](License.md) | A container for the licensing information related to the parent resource |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [String](String.md)
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://datatractor.github.io/schema/main/datatractor_schema/
+
+
+
+
+## LinkML Source
+
+<details>
+
+```yaml
+name: spdx
+description: An SPDX License Identifier entry.
+from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+rank: 1000
+slot_uri: dc_terms:identifier
+alias: spdx
+owner: License
+domain_of:
+- License
+range: string
+required: false
+
+```
+
+</details>

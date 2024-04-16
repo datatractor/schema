@@ -1,0 +1,154 @@
+# Class: License
+
+
+_A container for the licensing information related to the parent resource._
+
+
+
+
+
+URI: [datatractor_schema:License](https://datatractor.github.io/schema/main/datatractor_schema/License)
+
+
+
+```{mermaid}
+erDiagram
+License {
+    string uri  
+    string spdx  
+}
+
+
+
+```
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+## Slots
+
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [uri](uri.md) | 0..1 <br/> [String](String.md) | An unambiguous reference to the resource within a given context. | direct |
+| [spdx](spdx.md) | 0..1 <br/> [String](String.md) | An SPDX License Identifier entry. | direct |
+
+
+
+
+
+## Usages
+
+| used by | used in | type | used |
+| ---  | --- | --- | --- |
+| [Extractor](Extractor.md) | [license](license.md) | range | [License](License.md) |
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://datatractor.github.io/schema/main/datatractor_schema/
+
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | datatractor_schema:License |
+| native | datatractor_schema:License |
+
+
+
+
+
+## LinkML Source
+
+<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
+
+### Direct
+
+<details>
+
+```yaml
+name: License
+description: A container for the licensing information related to the parent resource.
+from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+rank: 1000
+attributes:
+  uri:
+    name: uri
+    description: An unambiguous reference to the resource within a given context.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    slot_uri: dc_terms:identifier
+    domain_of:
+    - Citation
+    - License
+    required: false
+  spdx:
+    name: spdx
+    description: An SPDX License Identifier entry.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    rank: 1000
+    slot_uri: dc_terms:identifier
+    domain_of:
+    - License
+    required: false
+
+```
+
+</details>
+
+### Induced
+
+<details>
+
+```yaml
+name: License
+description: A container for the licensing information related to the parent resource.
+from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+rank: 1000
+attributes:
+  uri:
+    name: uri
+    description: An unambiguous reference to the resource within a given context.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    slot_uri: dc_terms:identifier
+    alias: uri
+    owner: License
+    domain_of:
+    - Citation
+    - License
+    range: string
+    required: false
+  spdx:
+    name: spdx
+    description: An SPDX License Identifier entry.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    rank: 1000
+    slot_uri: dc_terms:identifier
+    alias: spdx
+    owner: License
+    domain_of:
+    - License
+    range: string
+    required: false
+
+```
+
+</details>

@@ -1,0 +1,74 @@
+# Slot: packages
+
+
+_A list of packages, including versioned packages or `git+https://` targets, to be installed using the Installer._
+
+
+
+URI: [datatractor_schema:packages](https://datatractor.github.io/schema/main/datatractor_schema/packages)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Installation](Installation.md) | A machine-actionable specification of a set of installation instructions for ... |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [String](String.md)
+
+* Multivalued: True
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://datatractor.github.io/schema/main/datatractor_schema/
+
+
+
+
+## LinkML Source
+
+<details>
+
+```yaml
+name: packages
+description: A list of packages, including versioned packages or `git+https://` targets,
+  to be installed using the Installer.
+from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+rank: 1000
+multivalued: true
+alias: packages
+owner: Installation
+domain_of:
+- Installation
+range: string
+
+```
+
+</details>

@@ -1,0 +1,72 @@
+# Slot: template
+
+
+_A mechanism for overriding the template values for this file type in the usage instructions._
+
+
+
+URI: [datatractor_schema:template](https://datatractor.github.io/schema/main/datatractor_schema/template)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[SupportedFileType](SupportedFileType.md) | An specification of a `FileType`, supported by the parent `Extractor` |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [UsageTemplate](UsageTemplate.md)
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://datatractor.github.io/schema/main/datatractor_schema/
+
+
+
+
+## LinkML Source
+
+<details>
+
+```yaml
+name: template
+description: A mechanism for overriding the template values for this file type in
+  the usage instructions.
+from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+rank: 1000
+alias: template
+owner: SupportedFileType
+domain_of:
+- SupportedFileType
+range: UsageTemplate
+required: false
+
+```
+
+</details>

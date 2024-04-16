@@ -1,0 +1,74 @@
+# Slot: base_formats
+
+
+_A list of any particular underlying generic formats which this `FileType` is based on, e.g., CSV, JSON, HDF5, XML._
+
+
+
+URI: [datatractor_schema:base_formats](https://datatractor.github.io/schema/main/datatractor_schema/base_formats)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[FileType](FileType.md) | A specific encoding of data for storage purposes |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [FileType](FileType.md)
+
+* Multivalued: True
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://datatractor.github.io/schema/main/datatractor_schema/
+
+
+
+
+## LinkML Source
+
+<details>
+
+```yaml
+name: base_formats
+description: A list of any particular underlying generic formats which this `FileType`
+  is based on, e.g., CSV, JSON, HDF5, XML.
+from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+rank: 1000
+multivalued: true
+alias: base_formats
+owner: FileType
+domain_of:
+- FileType
+range: FileType
+
+```
+
+</details>

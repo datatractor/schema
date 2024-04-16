@@ -1,0 +1,76 @@
+# Slot: setup
+
+
+_Any necessary setup step for the 'command' to become available._
+
+
+
+## Comments
+
+* For `method: python`, this is an argument to Python's `import`.
+
+URI: [datatractor_schema:setup](https://datatractor.github.io/schema/main/datatractor_schema/setup)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Usage](Usage.md) | A machine-actionable specification of a set of usage instructions of the pare... |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [String](String.md)
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://datatractor.github.io/schema/main/datatractor_schema/
+
+
+
+
+## LinkML Source
+
+<details>
+
+```yaml
+name: setup
+description: Any necessary setup step for the 'command' to become available.
+comments:
+- 'For `method: python`, this is an argument to Python''s `import`.'
+from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+rank: 1000
+alias: setup
+owner: Usage
+domain_of:
+- Usage
+range: string
+
+```
+
+</details>

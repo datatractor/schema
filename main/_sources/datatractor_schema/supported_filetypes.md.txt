@@ -1,0 +1,56 @@
+# Slot: supported_filetypes
+
+URI: [datatractor_schema:supported_filetypes](https://datatractor.github.io/schema/main/datatractor_schema/supported_filetypes)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Usage](Usage.md) | A machine-actionable specification of a set of usage instructions of the pare... |  no  |
+[Extractor](Extractor.md) | A script, code, or web service that, when executed, can extract information f... |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [String](String.md)
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+
+## LinkML Source
+
+<details>
+
+```yaml
+name: supported_filetypes
+alias: supported_filetypes
+domain_of:
+- Extractor
+- Usage
+range: string
+
+```
+
+</details>

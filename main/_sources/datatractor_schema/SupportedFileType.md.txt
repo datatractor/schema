@@ -1,0 +1,184 @@
+# Class: SupportedFileType
+
+
+_An specification of a `FileType`, supported by the parent `Extractor`._
+
+
+
+
+
+URI: [datatractor_schema:SupportedFileType](https://datatractor.github.io/schema/main/datatractor_schema/SupportedFileType)
+
+
+
+```{mermaid}
+erDiagram
+SupportedFileType {
+    string id  
+    string description  
+}
+UsageTemplate {
+    string input_path  
+    string input_type  
+    string output_path  
+    string output_type  
+}
+
+SupportedFileType ||--|o UsageTemplate : "template"
+
+```
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+## Slots
+
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [id](id.md) | 0..1 <br/> [String](String.md) | A reference to the registered datatractor `FileType->id` for this file type. | direct |
+| [description](description.md) | 0..1 <br/> [String](String.md) | Free-text description of caveats or instructions specific to this file type. | direct |
+| [template](template.md) | 0..1 <br/> [UsageTemplate](UsageTemplate.md) | A mechanism for overriding the template values for this file type in the usage<br/>instructions. | direct |
+
+
+
+
+
+## Usages
+
+| used by | used in | type | used |
+| ---  | --- | --- | --- |
+| [Extractor](Extractor.md) | [supported_filetypes](supported_filetypes.md) | range | [SupportedFileType](SupportedFileType.md) |
+| [Extractor](Extractor.md) | [supported_output_filetypes](supported_output_filetypes.md) | range | [SupportedFileType](SupportedFileType.md) |
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://datatractor.github.io/schema/main/datatractor_schema/
+
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | datatractor_schema:SupportedFileType |
+| native | datatractor_schema:SupportedFileType |
+
+
+
+
+
+## LinkML Source
+
+<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
+
+### Direct
+
+<details>
+
+```yaml
+name: SupportedFileType
+description: An specification of a `FileType`, supported by the parent `Extractor`.
+from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+rank: 1000
+attributes:
+  id:
+    name: id
+    description: A reference to the registered datatractor `FileType->id` for this
+      file type.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    domain_of:
+    - Extractor
+    - SupportedFileType
+    - FileType
+  description:
+    name: description
+    description: Free-text description of caveats or instructions specific to this
+      file type.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    domain_of:
+    - Extractor
+    - SupportedFileType
+    - FileType
+  template:
+    name: template
+    description: A mechanism for overriding the template values for this file type
+      in the usage instructions.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    rank: 1000
+    domain_of:
+    - SupportedFileType
+    range: UsageTemplate
+    required: false
+
+```
+
+</details>
+
+### Induced
+
+<details>
+
+```yaml
+name: SupportedFileType
+description: An specification of a `FileType`, supported by the parent `Extractor`.
+from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+rank: 1000
+attributes:
+  id:
+    name: id
+    description: A reference to the registered datatractor `FileType->id` for this
+      file type.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    alias: id
+    owner: SupportedFileType
+    domain_of:
+    - Extractor
+    - SupportedFileType
+    - FileType
+    range: string
+  description:
+    name: description
+    description: Free-text description of caveats or instructions specific to this
+      file type.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    alias: description
+    owner: SupportedFileType
+    domain_of:
+    - Extractor
+    - SupportedFileType
+    - FileType
+    range: string
+  template:
+    name: template
+    description: A mechanism for overriding the template values for this file type
+      in the usage instructions.
+    from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+    rank: 1000
+    alias: template
+    owner: SupportedFileType
+    domain_of:
+    - SupportedFileType
+    range: UsageTemplate
+    required: false
+
+```
+
+</details>

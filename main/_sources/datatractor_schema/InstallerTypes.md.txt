@@ -1,0 +1,66 @@
+# Enum: InstallerTypes
+
+
+
+
+_This enumeration allows the `Extractor->installation` to specify which installer software is to be used for the installation of the `Extractor`._
+
+
+
+URI: [InstallerTypes](InstallerTypes)
+
+## Permissible Values
+
+| Value | Description | Comments |
+| --- | --- | --- |
+| pip | Install the `Extractor` using 'pip'. Will process `packages` using `pip install`<br/>and `requirements` using `pip install -r`. |  |
+| conda | Install the `Extractor` using 'conda'. | Note that installation using `conda` is not yet supported by the API. |
+
+
+
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://datatractor.github.io/schema/main/datatractor_schema/
+
+
+
+
+## LinkML Source
+
+<details>
+
+```yaml
+name: InstallerTypes
+description: This enumeration allows the `Extractor->installation` to specify which
+  installer software is to be used for the installation of the `Extractor`.
+from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+rank: 1000
+permissible_values:
+  pip:
+    text: pip
+    description: Install the `Extractor` using 'pip'. Will process `packages` using
+      `pip install` and `requirements` using `pip install -r`.
+  conda:
+    text: conda
+    description: Install the `Extractor` using 'conda'.
+    comments:
+    - Note that installation using `conda` is not yet supported by the API.
+
+```
+
+</details>

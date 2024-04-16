@@ -1,0 +1,73 @@
+# Slot: instructions
+
+
+_Any human-readable usage notes or installation instructions for this `Extractor`. This field is intended for human use only and is not intended to be machine-actionable. Please use the `Extractor->installation` and `Extractor->usage` slots for that purpose._
+
+
+
+URI: [datatractor_schema:instructions](https://datatractor.github.io/schema/main/datatractor_schema/instructions)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Extractor](Extractor.md) | A script, code, or web service that, when executed, can extract information f... |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [String](String.md)
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://datatractor.github.io/schema/main/datatractor_schema/
+
+
+
+
+## LinkML Source
+
+<details>
+
+```yaml
+name: instructions
+description: Any human-readable usage notes or installation instructions for this
+  `Extractor`. This field is intended for human use only and is not intended to be
+  machine-actionable. Please use the `Extractor->installation` and `Extractor->usage`
+  slots for that purpose.
+from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+rank: 1000
+alias: instructions
+owner: Extractor
+domain_of:
+- Extractor
+range: string
+
+```
+
+</details>
