@@ -1,20 +1,20 @@
 ---
 name: filetype
-version: 0.2.0
-id: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/filetype
+version: 1.0
+id: https://datatractor.github.io/schema/main/datatractor_schema/filetype
 prefixes:
     linkml: https://w3id.org/linkml/
     schema_org: http://schema.org/
-    mme_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-default_prefix: mme_schema
+    datatractor_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+default_prefix: datatractor_schema
 emit_prefixes:
-    - mme_schema
+    - datatractor_schema
 imports:
     - linkml:types
     - base
 default_range: string
 description: >-
-    This file describes the `FileType` model created by the MaRDA extractors WG.
+    This file describes the `FileType` model from the datatractor schema.
 
 
 classes:

@@ -1,23 +1,23 @@
 ---
-title: MaRDA Metadata Extractors Schema
+title: datatractor schema
 name: extractor
-version: 0.2.0
-id: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+version: 1.0
+id: https://datatractor.github.io/schema/main/datatractor_schema/
 prefixes:
     linkml: https://w3id.org/linkml/
     schema_org: http://schema.org/
     dcmitype: http://purl.org/dc/dcmitype/1.1
-    mme_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-default_prefix: mme_schema
+    datatractor_schema: https://datatractor.github.io/schema/main/datatractor_schema/
+default_prefix: datatractor_schema
 emit_prefixes:
-    - mme_schema
+    - datatractor_schema
 imports:
     - linkml:types
     - base
     - filetype
 default_range: string
 description: >-
-    This file describes the `Extractor` model created by the MaRDA extractors WG.
+    This file describes the `Extractor` model from the datatractor schema.
 
 
 classes:
