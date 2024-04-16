@@ -54,7 +54,7 @@ The repository contains a schema two user-facing classes:
 
 .. |beamrepo| image:: https://badgen.net/static/datatractor/beam/?icon=github
 
-.. _MMEAPIRepo: https://github.com/datatractor/beam/
+.. _beamrepo: https://github.com/datatractor/beam/
 
 .. |LinkML| replace:: :mod:`LinkML`
 
