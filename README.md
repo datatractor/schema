@@ -10,7 +10,7 @@
 
 </div>
 
-A repository containing the [LinkML](https://linkml.io/linkml/)-based schemas backing the registry of extractors at [tractor yard](https://github.com/datatractor/yard/) and powering the reference implementation of the extractor framework at [tractor beam](https://github.com/datatractor/beam/).
+A repository containing the [LinkML](https://linkml.io/linkml/)-based schemas backing the registry of extractors at [datatractor yard](https://github.com/datatractor/yard/) and powering the reference implementation of the extractor framework at [datatractor beam](https://github.com/datatractor/beam/).
 
 This repository is a continuation of the MaRDA WG7 on Automated [Metadata Extractors](https://www.marda-alliance.org/working-group/wg7-automated-metadata-extractors/).
 
