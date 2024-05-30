@@ -76,7 +76,7 @@ html_context = {
     "conf_py_path": "/docs/source/"
 }
 html_logo = "https://avatars.githubusercontent.com/u/166528759"
-html_favicon = "https://datatractor.github.io/schema/main/images/166528759-32x32.png"
+html_favicon = "https://datatractor.github.io/schema/main/_images/166528759-32x32.png"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
