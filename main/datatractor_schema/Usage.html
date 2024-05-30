@@ -8,7 +8,7 @@
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/custom_theme.css" type="text/css" />
-    <link rel="shortcut icon" href="https://www.marda-alliance.org/wp-content/uploads/2023/04/cropped-favicon-32x32.png"/>
+    <link rel="shortcut icon" href="https://datatractor.github.io/schema/main/_images/166528759-32x32.png"/>
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -16,7 +16,7 @@
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../_static/documentation_options.js?v=a8da1a53"></script>
-        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
         <script>mermaid.initialize({startOnLoad:true});</script>
@@ -37,7 +37,7 @@
           
           <a href="../index.html" class="icon icon-home">
             datatractor schema
-              <img src="https://avatars.githubusercontent.com/u/74017645?s=200&v=4" class="logo" alt="Logo"/>
+              <img src="https://avatars.githubusercontent.com/u/166528759" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 main
@@ -80,12 +80,12 @@
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#mappings">Mappings</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#example-usage-cli">Example: Usage-cli</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#example-usage-python-templating-scope">Example: Usage-python_templating_scope</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#example-usage-cli-scope">Example: Usage-cli_scope</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#example-usage-python-setup">Example: Usage-python_setup</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#example-usage-python-setup-scope">Example: Usage-python_setup_scope</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#example-usage-cli-filetypes">Example: Usage-cli_filetypes</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#example-usage-python-templating-scope">Example: Usage-python_templating_scope</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#example-usage-python-setup-scope">Example: Usage-python_setup_scope</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#example-usage-cli-scope">Example: Usage-cli_scope</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#example-usage-cli">Example: Usage-cli</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#example-usage-python-setup">Example: Usage-python_setup</a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#linkml-source">LinkML Source</a><ul>
@@ -234,11 +234,14 @@ Usage {
 </section>
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
-<section id="example-usage-cli">
-<h3>Example: Usage-cli<a class="headerlink" href="#example-usage-cli" title="Link to this heading"></a></h3>
+<section id="example-usage-cli-filetypes">
+<h3>Example: Usage-cli_filetypes<a class="headerlink" href="#example-usage-cli-filetypes" title="Link to this heading"></a></h3>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
 <span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cli</span>
-<span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parse --type={{ input_type }} {{ file_path }}</span>
+<span class="nt">scope</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meta-only</span>
+<span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parse --type=example --summary {{ file_path }}</span>
+<span class="nt">supported_filetypes</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span>
 </pre></div>
 </div>
 </section>
@@ -253,24 +256,6 @@ Usage {
 </pre></div>
 </div>
 </section>
-<section id="example-usage-cli-scope">
-<h3>Example: Usage-cli_scope<a class="headerlink" href="#example-usage-cli-scope" title="Link to this heading"></a></h3>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
-<span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cli</span>
-<span class="nt">scope</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meta-only</span>
-<span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parse --type=example --summary {{ file_path }}</span>
-</pre></div>
-</div>
-</section>
-<section id="example-usage-python-setup">
-<h3>Example: Usage-python_setup<a class="headerlink" href="#example-usage-python-setup" title="Link to this heading"></a></h3>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
-<span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python</span>
-<span class="nt">setup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example.extractors</span>
-<span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example.extractors.extract({{ file_path }}, type=&quot;{{ input_type }}&quot;)</span>
-</pre></div>
-</div>
-</section>
 <section id="example-usage-python-setup-scope">
 <h3>Example: Usage-python_setup_scope<a class="headerlink" href="#example-usage-python-setup-scope" title="Link to this heading"></a></h3>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
@@ -281,14 +266,29 @@ Usage {
 </pre></div>
 </div>
 </section>
-<section id="example-usage-cli-filetypes">
-<h3>Example: Usage-cli_filetypes<a class="headerlink" href="#example-usage-cli-filetypes" title="Link to this heading"></a></h3>
+<section id="example-usage-cli-scope">
+<h3>Example: Usage-cli_scope<a class="headerlink" href="#example-usage-cli-scope" title="Link to this heading"></a></h3>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
 <span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cli</span>
 <span class="nt">scope</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meta-only</span>
 <span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parse --type=example --summary {{ file_path }}</span>
-<span class="nt">supported_filetypes</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span>
+</pre></div>
+</div>
+</section>
+<section id="example-usage-cli">
+<h3>Example: Usage-cli<a class="headerlink" href="#example-usage-cli" title="Link to this heading"></a></h3>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cli</span>
+<span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parse --type={{ input_type }} {{ file_path }}</span>
+</pre></div>
+</div>
+</section>
+<section id="example-usage-python-setup">
+<h3>Example: Usage-python_setup<a class="headerlink" href="#example-usage-python-setup" title="Link to this heading"></a></h3>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python</span>
+<span class="nt">setup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example.extractors</span>
+<span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example.extractors.extract({{ file_path }}, type=&quot;{{ input_type }}&quot;)</span>
 </pre></div>
 </div>
 </section>

@@ -81,12 +81,15 @@ Usage {
 
 
 ## Examples
-### Example: Usage-cli
+### Example: Usage-cli_filetypes
 
 ```yaml
 ---
 method: cli
-command: parse --type={{ input_type }} {{ file_path }}
+scope: meta-only
+command: parse --type=example --summary {{ file_path }}
+supported_filetypes:
+    - example
 
 ```
 ### Example: Usage-python_templating_scope
@@ -100,24 +103,6 @@ command: >-
 scope: meta+data
 
 ```
-### Example: Usage-cli_scope
-
-```yaml
----
-method: cli
-scope: meta-only
-command: parse --type=example --summary {{ file_path }}
-
-```
-### Example: Usage-python_setup
-
-```yaml
----
-method: python
-setup: example.extractors
-command: example.extractors.extract({{ file_path }}, type="{{ input_type }}")
-
-```
 ### Example: Usage-python_setup_scope
 
 ```yaml
@@ -128,15 +113,30 @@ scope: meta-only
 command: example.extractors.extract.ExampleExtractor({{ file_path }}).summarize()
 
 ```
-### Example: Usage-cli_filetypes
+### Example: Usage-cli_scope
 
 ```yaml
 ---
 method: cli
 scope: meta-only
 command: parse --type=example --summary {{ file_path }}
-supported_filetypes:
-    - example
+
+```
+### Example: Usage-cli
+
+```yaml
+---
+method: cli
+command: parse --type={{ input_type }} {{ file_path }}
+
+```
+### Example: Usage-python_setup
+
+```yaml
+---
+method: python
+setup: example.extractors
+command: example.extractors.extract({{ file_path }}, type="{{ input_type }}")
 
 ```
 

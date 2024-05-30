@@ -4,3 +4,9 @@
 .wy-nav-content {
     max-width: 1280px;
 }
+.wy-side-nav-search {
+    background: #01152F;
+}
+.wy-side-nav-search > div.version {
+    color: #CF000F;
+}
