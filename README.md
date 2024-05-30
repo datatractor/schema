@@ -1,8 +1,8 @@
 <div align="center" style="padding-bottom: 1em;">
-<img width="100px" align="center" src="https://avatars.githubusercontent.com/u/74017645?s=200&v=4">
+<img width="100px" align="center" src="https://avatars.githubusercontent.com/u/166528759">
 </div>
 
-# <div align="center">datatractor: schema</div>
+# <div align="center">Datatractor Schema: <br/> Schemas for Metadata Extractors</div>
 <div align="center">
 
 [![Documentation](https://badgen.net/badge/docs/datatractor.github.io/blue?icon=firefox)](https://datatractor.github.io/schema)
