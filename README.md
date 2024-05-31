@@ -10,7 +10,7 @@
 
 </div>
 
-A repository containing the [LinkML](https://linkml.io/linkml/)-based schemas backing the registry of extractors at [datatractor yard](https://github.com/datatractor/yard/) and powering the reference implementation of the extractor framework at [datatractor beam](https://github.com/datatractor/beam/).
+A repository containing the [LinkML](https://linkml.io/linkml/)-based schemas backing the registry of extractors at [Datatractor Yard](https://github.com/datatractor/yard/) and powering the reference implementation of the extractor framework at [Datatractor Beam](https://github.com/datatractor/beam/).
 
 This repository is a continuation of the MaRDA WG7 on Automated [Metadata Extractors](https://www.marda-alliance.org/working-group/wg7-automated-metadata-extractors/).
 
@@ -49,12 +49,12 @@ gen-python schemas/filetype.yaml >> filetype.py
 gen-pydantic schemas/extractor.yaml >> extractor.py
 ```
 
-The generated files can be used in downstream codes such as in the [validation function](https://github.com/datatractor/beam/blob/main/tasks.py#L33) of [datatractor beam](https://github.com/datatractor/beam).
+The generated files can be used in downstream codes such as in the [validation function](https://github.com/datatractor/beam/blob/main/tasks.py#L33) of [Datatractor Beam](https://github.com/datatractor/beam).
 
 ## Contributing
 
 Contributions are welcome. We pledge to follow the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/).
 
-If you wish to contribute a new `FileType` or a new `Extractor` to the Registry, please open a pull request at the [datatractor yard repo](https://github.com/datatractor/yard).
+If you wish to contribute a new `FileType` or a new `Extractor` to the Registry, please open a pull request at the [Datatractor Yard repo](https://github.com/datatractor/yard).
 
-If you have any suggestions, technical queries, or a feature request related to the schemas, please do not hesitate to open an issue in this repository. For general questions related to the datatractor project, please use the [datatractor schema discussion board](https://github.com/datatractor/schema/discussions).
+If you have any suggestions, technical queries, or a feature request related to the schemas, please do not hesitate to open an issue in this repository. For general questions related to the Datatractor project, please use the [Datatractor discussion board](https://github.com/orgs/datatractor/discussions).

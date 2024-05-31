@@ -1,4 +1,4 @@
-Usage of datatractor schema
+Usage of Datatractor Schema
 ===========================
 
 Usage example
@@ -8,7 +8,7 @@ This repository is intended to be used as a |git submodule|_ to be cloned and us
 
 .. figure:: images/registry.screenshot.PNG
    :target: https://github.com/datatractor/yard
-   :alt: A screenshot of the datatractor yard showing "schemas" as a link to another repository.
+   :alt: A screenshot of the Datatractor Yard showing "schemas" as a link to another repository.
 
    A screenshot of |yard|. Note that ``schemas`` is a ``git submodule``, pointing to the Schema repository at a certain commit (here: |c03a732|_, corresponding to the 1.0 release).
 
@@ -52,7 +52,7 @@ The generated files are intended to be used in downstream codes such as in the `
 
 .. _git submodule: https://git-scm.com/book/en/v2/Git-Tools-Submodules
 
-.. |yard| replace:: datatractor yard
+.. |yard| replace:: Datatractor Yard
 
 .. _yard: https://github.com/datatractor/yard
 

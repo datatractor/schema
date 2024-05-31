@@ -19,8 +19,8 @@ version = "main"
 
 # -- Project information -----------------------------------------------------
 
-project = "datatractor schema"
-copyright = "2022 - 2024, datatractor team"
+project = "Datatractor Schema"
+copyright = "2022 - 2024, Datatractor team"
 author = "Matthew Evans, Peter Kraus"
 release = version
 

@@ -14,7 +14,7 @@ imports:
     - base
 default_range: string
 description: >-
-    This file describes the `FileType` model from the datatractor schema.
+    This file describes the `FileType` model from the Datatractor Schema.
 
 
 classes:

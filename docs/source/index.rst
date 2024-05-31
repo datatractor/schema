@@ -1,5 +1,5 @@
-datatractor schema
-==================
+Datatractor Schema: Schemas for Metadata Extractors
+===================================================
 
 A repository at |schemarepo|_, containing the |LinkML|_-based schemas backing the |yardrepo|_.
 

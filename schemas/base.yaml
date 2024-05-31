@@ -12,7 +12,7 @@ imports:
     - linkml:types
 default_range: string
 description: >-
-    This file describes the generic slots used by models in the datatractor schema.
+    This file describes the generic slots used by models in the Datatractor Schema.
 
 
 classes:
@@ -77,7 +77,7 @@ classes:
         attributes:
             id:
                 description: >-
-                    A reference to the registered datatractor `FileType->id` for this file
+                    A reference to the registered Datatractor `FileType->id` for this file
                     type.
             description:
                 description: Free-text description of caveats or instructions specific
@@ -213,7 +213,7 @@ slots:
         slot_uri: schema_org:identifier
         required: true
         description: >-
-            A unique identifier for the entry within the datatractor yard
+            A unique identifier for the entry within the Datatractor Yard
             namespace, this should be a shorthand label rather than
             a UUID. Only lower-case alphanumeric and dash ("-") characters
             are permitted.
