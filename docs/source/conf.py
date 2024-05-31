@@ -19,8 +19,8 @@ version = "main"
 
 # -- Project information -----------------------------------------------------
 
-project = "Satatractor Schema"
-copyright = "2022 - 2024, Datatractor Team"
+project = "datatractor schema"
+copyright = "2022 - 2024, datatractor team"
 author = "Matthew Evans, Peter Kraus"
 release = version
 
@@ -73,7 +73,7 @@ html_context = {
     "github_user": "datatractor",
     "github_repo": "schema",
     "github_version": version,
-    "conf_py_path": "/docs/source/",
+    "conf_py_path": "/docs/source/"
 }
 html_logo = "https://avatars.githubusercontent.com/u/166528759"
 html_favicon = "https://datatractor.github.io/schema/main/_images/166528759-32x32.png"
