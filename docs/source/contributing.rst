@@ -9,7 +9,7 @@ Contributions to this project are welcome. We pledge to follow the `Contributor 
 
 If you have any suggestions, technical queries, or a feature request related to the schemas, please do not hesitate to `open an issue <https://github.com/datatractor/schema/issues>`_ on |schemarepo|_.
 
-For general questions related to the datatractor project, please use the `discussion board in the schema repo on GitHub <https://github.com/datatractor/schema/discussions>`_.
+For general questions related to the Datatractor project, please use the `discussion board on the Datatractor page on GitHub <https://github.com/orgs/datatractor/discussions>`_.
 
 Contributors
 ------------

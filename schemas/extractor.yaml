@@ -1,5 +1,5 @@
 ---
-title: datatractor schema
+title: Datatractor Schema
 name: extractor
 version: 1.0
 id: https://datatractor.github.io/schema/main/datatractor_schema/
@@ -17,7 +17,7 @@ imports:
     - filetype
 default_range: string
 description: >-
-    This file describes the `Extractor` model from the datatractor schema.
+    This file describes the `Extractor` model from the Datatractor Schema.
 
 
 classes:

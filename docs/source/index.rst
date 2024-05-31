@@ -1,9 +1,9 @@
-datatractor schema
-==================
+Datatractor Schema: Schemas for Metadata Extractors
+===================================================
 
 A repository at |schemarepo|_, containing the |LinkML|_-based schemas backing the |yardrepo|_.
 
-The schemas implemented here are machine-actionable. They are used by the `Registry <https://marda-registry.fly.dev/>`_ to validate entries; a reference implementation demonstrating their pracical use is shown in the |beamrepo|_.
+The schemas implemented here are machine-actionable. They are used by the `Registry <https://yard.datatractor.org/>`_ to validate entries; a reference implementation demonstrating their pracical use is shown in the |beamrepo|_.
 
 .. note::
 
