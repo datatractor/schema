@@ -39,7 +39,7 @@ FileType ||--}o FileType : "base_formats"
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [id](id.md) | 1..1 <br/> [String](String.md) | A unique identifier for the entry within the datatractor yard namespace, this<br/>should be a shorthand label rather than a UUID. Only lower-case alphanumeric and<br/>dash ("-") characters are permitted. | direct |
+| [id](id.md) | 1..1 <br/> [String](String.md) | A unique identifier for the entry within the Datatractor Yard namespace, this<br/>should be a shorthand label rather than a UUID. Only lower-case alphanumeric and<br/>dash ("-") characters are permitted. | direct |
 | [description](description.md) | 1..1 <br/> [String](String.md) | A human-readable outline of the entry, its format, data content and uses. | direct |
 | [name](name.md) | 1..1 <br/> [String](String.md) | A recognisable name for the entry. | direct |
 | [subject](subject.md) | 0..* <br/> [String](String.md) | Any keywords, phrases or classification codes that are relevant to the entry,<br/>e.g., particular scientific domains of applicability, or experimental<br/>techniques. | direct |
@@ -351,7 +351,7 @@ attributes:
     pattern: ^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$
   id:
     name: id
-    description: A unique identifier for the entry within the datatractor yard namespace,
+    description: A unique identifier for the entry within the Datatractor Yard namespace,
       this should be a shorthand label rather than a UUID. Only lower-case alphanumeric
       and dash ("-") characters are permitted.
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/

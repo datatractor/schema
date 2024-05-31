@@ -1,5 +1,5 @@
 # extractor
 
-This file describes the `Extractor` model from the datatractor schema.
+This file describes the `Extractor` model from the Datatractor Schema.
 
 URI: https://datatractor.github.io/schema/main/datatractor_schema/

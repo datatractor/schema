@@ -37,7 +37,7 @@ SupportedFileType ||--|o UsageTemplate : "template"
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [id](id.md) | 0..1 <br/> [String](String.md) | A reference to the registered datatractor `FileType->id` for this file type. | direct |
+| [id](id.md) | 0..1 <br/> [String](String.md) | A reference to the registered Datatractor `FileType->id` for this file type. | direct |
 | [description](description.md) | 0..1 <br/> [String](String.md) | Free-text description of caveats or instructions specific to this file type. | direct |
 | [template](template.md) | 0..1 <br/> [UsageTemplate](UsageTemplate.md) | A mechanism for overriding the template values for this file type in the usage<br/>instructions. | direct |
 
@@ -101,7 +101,7 @@ rank: 1000
 attributes:
   id:
     name: id
-    description: A reference to the registered datatractor `FileType->id` for this
+    description: A reference to the registered Datatractor `FileType->id` for this
       file type.
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
     domain_of:
@@ -144,7 +144,7 @@ rank: 1000
 attributes:
   id:
     name: id
-    description: A reference to the registered datatractor `FileType->id` for this
+    description: A reference to the registered Datatractor `FileType->id` for this
       file type.
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
     alias: id

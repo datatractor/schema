@@ -1,6 +1,6 @@
-# datatractor schema
+# Datatractor Schema
 
-This file describes the `Extractor` model from the datatractor schema.
+This file describes the `Extractor` model from the Datatractor Schema.
 
 URI: https://datatractor.github.io/schema/main/datatractor_schema/
 
@@ -129,7 +129,7 @@ UsageTemplate
 | [creators](creators.md) | A list of the creators of the resource. |
 | [description](description.md) | A human-readable outline of the entry, its format, data content and uses. |
 | [documentation](documentation.md) | A URL or URI for any online documentation associated with this extractor. |
-| [id](id.md) | A unique identifier for the entry within the datatractor yard namespace, this<br/>should be a shorthand label rather than a UUID. Only lower-case alphanumeric and<br/>dash ("-") characters are permitted. |
+| [id](id.md) | A unique identifier for the entry within the Datatractor Yard namespace, this<br/>should be a shorthand label rather than a UUID. Only lower-case alphanumeric and<br/>dash ("-") characters are permitted. |
 | [input_path](input_path.md) | The location of the resource (e.g., file, or directory) on disk to be extracted.<br/>Required. |
 | [input_type](input_type.md) | The `FileType` of the `input_path`. Defaults to the `FileType->id` for each<br/>supported file type. |
 | [installation](installation.md) | A machine-actionable set of installation instructions to obtain a working set-up<br/>of the `Extractor`. |
