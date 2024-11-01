@@ -14,6 +14,13 @@ A repository containing the [LinkML](https://linkml.io/linkml/)-based schemas ba
 
 This repository is a continuation of the MaRDA WG7 on Automated [Metadata Extractors](https://www.marda-alliance.org/working-group/wg7-automated-metadata-extractors/).
 
+For more information, see the preprint:
+
+> **Datatractor: Metadata, automation, and registries for extractor interoperability in the chemical and materials sciences**  
+> Matthew L. Evans, Gian-Marco Rignanese, David Elbert & Peter Kraus  
+> [arXiv:2410.18839](https://arxiv.org/abs/2410.18839) (2024)
+
+
 ## Contents
 The repository contains two user-facing schemas:
 
