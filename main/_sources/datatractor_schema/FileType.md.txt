@@ -180,27 +180,27 @@ attributes:
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
     rank: 1000
     slot_uri: schema_org:vendor
-    multivalued: true
     domain_of:
     - FileType
+    multivalued: true
   associated_instruments:
     name: associated_instruments
     description: A list of any instruments, or classes of instruments, that typically
       create the data encoded into this `FileType`.
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
     rank: 1000
-    multivalued: true
     domain_of:
     - FileType
+    multivalued: true
   associated_software:
     name: associated_software
     description: A list of any known software (proprietary or otherwise) that produces
       such `FileType`.
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
     rank: 1000
-    multivalued: true
     domain_of:
     - FileType
+    multivalued: true
   associated_file_extensions:
     name: associated_file_extensions
     description: A list of any known file extensions that files of this `FileType`
@@ -208,9 +208,9 @@ attributes:
       omit the leading `'.'`, e.g. 'json' or 'txt'.
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
     rank: 1000
-    multivalued: true
     domain_of:
     - FileType
+    multivalued: true
     pattern: ^[A-z,0-9]*[A-z,0-9,.]+[A-z,0-9]$
   base_formats:
     name: base_formats
@@ -218,28 +218,28 @@ attributes:
       is based on, e.g., CSV, JSON, HDF5, XML.
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
     rank: 1000
-    multivalued: true
     domain_of:
     - FileType
     range: FileType
+    multivalued: true
   associated_standards:
     name: associated_standards
     description: A list of any particular well-defined file format standards relevant
       to this `FileType`, e.g., CIF, NeXus, then it can be listed here.
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
     rank: 1000
-    multivalued: true
     domain_of:
     - FileType
+    multivalued: true
   registered_extractors:
     name: registered_extractors
     description: A slot for an automatically-generated enumeration of `Extractor`
       IDs that support this file type. This slot should be auto-populated by a registry.
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
     rank: 1000
-    multivalued: true
     domain_of:
     - FileType
+    multivalued: true
     pattern: ^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$
 
 ```
@@ -268,36 +268,36 @@ attributes:
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
     rank: 1000
     slot_uri: schema_org:vendor
-    multivalued: true
     alias: associated_vendors
     owner: FileType
     domain_of:
     - FileType
     range: string
+    multivalued: true
   associated_instruments:
     name: associated_instruments
     description: A list of any instruments, or classes of instruments, that typically
       create the data encoded into this `FileType`.
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
     rank: 1000
-    multivalued: true
     alias: associated_instruments
     owner: FileType
     domain_of:
     - FileType
     range: string
+    multivalued: true
   associated_software:
     name: associated_software
     description: A list of any known software (proprietary or otherwise) that produces
       such `FileType`.
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
     rank: 1000
-    multivalued: true
     alias: associated_software
     owner: FileType
     domain_of:
     - FileType
     range: string
+    multivalued: true
   associated_file_extensions:
     name: associated_file_extensions
     description: A list of any known file extensions that files of this `FileType`
@@ -305,12 +305,12 @@ attributes:
       omit the leading `'.'`, e.g. 'json' or 'txt'.
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
     rank: 1000
-    multivalued: true
     alias: associated_file_extensions
     owner: FileType
     domain_of:
     - FileType
     range: string
+    multivalued: true
     pattern: ^[A-z,0-9]*[A-z,0-9,.]+[A-z,0-9]$
   base_formats:
     name: base_formats
@@ -318,36 +318,36 @@ attributes:
       is based on, e.g., CSV, JSON, HDF5, XML.
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
     rank: 1000
-    multivalued: true
     alias: base_formats
     owner: FileType
     domain_of:
     - FileType
     range: FileType
+    multivalued: true
   associated_standards:
     name: associated_standards
     description: A list of any particular well-defined file format standards relevant
       to this `FileType`, e.g., CIF, NeXus, then it can be listed here.
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
     rank: 1000
-    multivalued: true
     alias: associated_standards
     owner: FileType
     domain_of:
     - FileType
     range: string
+    multivalued: true
   registered_extractors:
     name: registered_extractors
     description: A slot for an automatically-generated enumeration of `Extractor`
       IDs that support this file type. This slot should be auto-populated by a registry.
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
     rank: 1000
-    multivalued: true
     alias: registered_extractors
     owner: FileType
     domain_of:
     - FileType
     range: string
+    multivalued: true
     pattern: ^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$
   id:
     name: id
@@ -403,13 +403,13 @@ attributes:
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
     rank: 1000
     slot_uri: dc_terms:subject
-    multivalued: true
     alias: subject
     owner: FileType
     domain_of:
     - Extractor
     - FileType
     range: string
+    multivalued: true
 
 ```
 

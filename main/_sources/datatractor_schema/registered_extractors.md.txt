@@ -64,12 +64,12 @@ description: A slot for an automatically-generated enumeration of `Extractor` ID
   that support this file type. This slot should be auto-populated by a registry.
 from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
 rank: 1000
-multivalued: true
 alias: registered_extractors
 owner: FileType
 domain_of:
 - FileType
 range: string
+multivalued: true
 pattern: ^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$
 
 ```

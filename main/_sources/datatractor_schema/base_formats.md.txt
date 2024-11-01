@@ -62,12 +62,12 @@ description: A list of any particular underlying generic formats which this `Fil
   is based on, e.g., CSV, JSON, HDF5, XML.
 from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
 rank: 1000
-multivalued: true
 alias: base_formats
 owner: FileType
 domain_of:
 - FileType
 range: FileType
+multivalued: true
 
 ```
 

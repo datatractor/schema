@@ -130,6 +130,51 @@ SupportedFileType ||--|o UsageTemplate : "template"
 
 
 ## Examples
+### Example: Extractor-datatree
+
+```yaml
+---
+id: >-
+    datatree
+name: >-
+    Datatree is a prototype implementation of a tree-like hierarchical
+    data structure for xarray.
+description: >-
+    Extractor for netCDF files using xarray's Datasets.
+subject:
+    - data science
+source_repository: >-
+    https://github.com/xarray-contrib/datatree
+documentation: >-
+    https://xarray-datatree.readthedocs.io/en/latest/
+usage:
+    - method: python
+      scope: meta+data
+      setup: datatree
+      command: datatree.open_datatree({{ file_path }})
+installation:
+    - method: pip
+      packages:
+          - xarray-datatree==0.0.12
+      requires_python: '>=3.9'
+instructions: >-
+    Install the xarray-datatree package into a Python 3.9+ environment with
+    `pip install xarray-datatree`. After importing, netCDF files can be read
+    as DataTrees using the 'datatree.open_datatree()' function.
+citations:
+    - title: Datatree documentation
+      uri: https://xarray-datatree.readthedocs.io/en/latest/
+      creators:
+          - T. Nicholas
+      type: software
+supported_filetypes:
+    - id: netcdf
+      description: >-
+          Can load netCDF files into Datatree objects.
+license:
+    spdx: Apache-2.0
+
+```
 ### Example: Extractor-example
 
 ```yaml
@@ -188,51 +233,6 @@ license:
     uri: https://example.com
 
 ```
-### Example: Extractor-datatree
-
-```yaml
----
-id: >-
-    datatree
-name: >-
-    Datatree is a prototype implementation of a tree-like hierarchical
-    data structure for xarray.
-description: >-
-    Extractor for netCDF files using xarray's Datasets.
-subject:
-    - data science
-source_repository: >-
-    https://github.com/xarray-contrib/datatree
-documentation: >-
-    https://xarray-datatree.readthedocs.io/en/latest/
-usage:
-    - method: python
-      scope: meta+data
-      setup: datatree
-      command: datatree.open_datatree({{ file_path }})
-installation:
-    - method: pip
-      packages:
-          - xarray-datatree==0.0.12
-      requires_python: '>=3.9'
-instructions: >-
-    Install the xarray-datatree package into a Python 3.9+ environment with
-    `pip install xarray-datatree`. After importing, netCDF files can be read
-    as DataTrees using the 'datatree.open_datatree()' function.
-citations:
-    - title: Datatree documentation
-      uri: https://xarray-datatree.readthedocs.io/en/latest/
-      creators:
-          - T. Nicholas
-      type: software
-supported_filetypes:
-    - id: netcdf
-      description: >-
-          Can load netCDF files into Datatree objects.
-license:
-    spdx: Apache-2.0
-
-```
 
 
 
@@ -275,12 +275,12 @@ attributes:
       the `Extractor`, [see the `Usage` class](Usage.md).
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
     rank: 1000
-    multivalued: true
     domain_of:
     - Extractor
     - Usage
     range: SupportedFileType
     required: true
+    multivalued: true
   supported_output_filetypes:
     name: supported_output_filetypes
     description: An enumeration of the possible output formats of an `Extractor`.
@@ -289,11 +289,11 @@ attributes:
       slot, [see the `Usage` class](Usage.md).
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
     rank: 1000
-    multivalued: true
     domain_of:
     - Extractor
     range: SupportedFileType
     required: false
+    multivalued: true
   source_repository:
     name: source_repository
     description: A URL or URI for a source code repository associated with this extractor.
@@ -315,10 +315,10 @@ attributes:
       in `Extractor->installation` slot have been followed.
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
     rank: 1000
-    multivalued: true
     domain_of:
     - Extractor
     range: Usage
+    multivalued: true
     inlined: true
     inlined_as_list: true
   installation:
@@ -327,10 +327,10 @@ attributes:
       working set-up of the `Extractor`.
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
     rank: 1000
-    multivalued: true
     domain_of:
     - Extractor
     range: Installation
+    multivalued: true
     inlined: true
     inlined_as_list: true
   instructions:
@@ -375,7 +375,6 @@ attributes:
       the `Extractor`, [see the `Usage` class](Usage.md).
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
     rank: 1000
-    multivalued: true
     alias: supported_filetypes
     owner: Extractor
     domain_of:
@@ -383,6 +382,7 @@ attributes:
     - Usage
     range: SupportedFileType
     required: true
+    multivalued: true
   supported_output_filetypes:
     name: supported_output_filetypes
     description: An enumeration of the possible output formats of an `Extractor`.
@@ -391,13 +391,13 @@ attributes:
       slot, [see the `Usage` class](Usage.md).
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
     rank: 1000
-    multivalued: true
     alias: supported_output_filetypes
     owner: Extractor
     domain_of:
     - Extractor
     range: SupportedFileType
     required: false
+    multivalued: true
   source_repository:
     name: source_repository
     description: A URL or URI for a source code repository associated with this extractor.
@@ -425,12 +425,12 @@ attributes:
       in `Extractor->installation` slot have been followed.
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
     rank: 1000
-    multivalued: true
     alias: usage
     owner: Extractor
     domain_of:
     - Extractor
     range: Usage
+    multivalued: true
     inlined: true
     inlined_as_list: true
   installation:
@@ -439,12 +439,12 @@ attributes:
       working set-up of the `Extractor`.
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
     rank: 1000
-    multivalued: true
     alias: installation
     owner: Extractor
     domain_of:
     - Extractor
     range: Installation
+    multivalued: true
     inlined: true
     inlined_as_list: true
   instructions:
@@ -514,13 +514,13 @@ attributes:
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
     rank: 1000
     slot_uri: dc_terms:subject
-    multivalued: true
     alias: subject
     owner: Extractor
     domain_of:
     - Extractor
     - FileType
     range: string
+    multivalued: true
   citations:
     name: citations
     description: A citation or citations for the entry, to be provided should it be
@@ -528,13 +528,13 @@ attributes:
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
     rank: 1000
     slot_uri: dcmitype:BibliographicReference
-    multivalued: true
     alias: citations
     owner: Extractor
     domain_of:
     - Extractor
     range: Citation
     required: false
+    multivalued: true
   license:
     name: license
     description: A URL, URI or SPDX license identifier for a legal document giving

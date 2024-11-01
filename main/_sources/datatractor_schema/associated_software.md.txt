@@ -62,12 +62,12 @@ description: A list of any known software (proprietary or otherwise) that produc
   such `FileType`.
 from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
 rank: 1000
-multivalued: true
 alias: associated_software
 owner: FileType
 domain_of:
 - FileType
 range: string
+multivalued: true
 
 ```
 

@@ -62,12 +62,12 @@ description: A machine-actionable set of installation instructions to obtain a w
   set-up of the `Extractor`.
 from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
 rank: 1000
-multivalued: true
 alias: installation
 owner: Extractor
 domain_of:
 - Extractor
 range: Installation
+multivalued: true
 inlined: true
 inlined_as_list: true
 

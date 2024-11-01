@@ -62,12 +62,12 @@ description: A list of any particular well-defined file format standards relevan
   to this `FileType`, e.g., CIF, NeXus, then it can be listed here.
 from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
 rank: 1000
-multivalued: true
 alias: associated_standards
 owner: FileType
 domain_of:
 - FileType
 range: string
+multivalued: true
 
 ```
 

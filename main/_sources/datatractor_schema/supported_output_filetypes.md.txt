@@ -64,13 +64,13 @@ description: An enumeration of the possible output formats of an `Extractor`. Th
   [see the `Usage` class](Usage.md).
 from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
 rank: 1000
-multivalued: true
 alias: supported_output_filetypes
 owner: Extractor
 domain_of:
 - Extractor
 range: SupportedFileType
 required: false
+multivalued: true
 
 ```
 

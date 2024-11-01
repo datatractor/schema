@@ -92,15 +92,13 @@ supported_filetypes:
     - example
 
 ```
-### Example: Usage-python_templating_scope
+### Example: Usage-cli_scope
 
 ```yaml
 ---
-method: python
-setup: example
-command: >-
-    '{{ input_type }}.extractors.extract.ExampleExtractor({{ file_path }}).parse()'
-scope: meta+data
+method: cli
+scope: meta-only
+command: parse --type=example --summary {{ file_path }}
 
 ```
 ### Example: Usage-python_setup_scope
@@ -113,21 +111,23 @@ scope: meta-only
 command: example.extractors.extract.ExampleExtractor({{ file_path }}).summarize()
 
 ```
-### Example: Usage-cli_scope
-
-```yaml
----
-method: cli
-scope: meta-only
-command: parse --type=example --summary {{ file_path }}
-
-```
 ### Example: Usage-cli
 
 ```yaml
 ---
 method: cli
 command: parse --type={{ input_type }} {{ file_path }}
+
+```
+### Example: Usage-python_templating_scope
+
+```yaml
+---
+method: python
+setup: example
+command: >-
+    '{{ input_type }}.extractors.extract.ExampleExtractor({{ file_path }}).parse()'
+scope: meta+data
 
 ```
 ### Example: Usage-python_setup
@@ -209,11 +209,11 @@ attributes:
       slot of the `Extractor`. Defaults to all `supported_filetypes` specified in
       the `Extractor` definition.
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
-    multivalued: true
     domain_of:
     - Extractor
     - Usage
     required: false
+    multivalued: true
 
 ```
 
@@ -291,7 +291,6 @@ attributes:
       slot of the `Extractor`. Defaults to all `supported_filetypes` specified in
       the `Extractor` definition.
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
-    multivalued: true
     alias: supported_filetypes
     owner: Usage
     domain_of:
@@ -299,6 +298,7 @@ attributes:
     - Usage
     range: string
     required: false
+    multivalued: true
 
 ```
 

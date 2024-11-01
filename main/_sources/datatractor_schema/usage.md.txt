@@ -63,12 +63,12 @@ description: A machine-actionable instructions for the usage of the Extractor. T
   slot have been followed.
 from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
 rank: 1000
-multivalued: true
 alias: usage
 owner: Extractor
 domain_of:
 - Extractor
 range: Usage
+multivalued: true
 inlined: true
 inlined_as_list: true
 

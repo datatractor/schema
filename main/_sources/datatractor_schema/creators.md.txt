@@ -62,12 +62,12 @@ description: A list of the creators of the resource.
 from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
 rank: 1000
 slot_uri: dc_terms:creator
-multivalued: true
 alias: creators
 owner: Citation
 domain_of:
 - Citation
 range: string
+multivalued: true
 
 ```
 

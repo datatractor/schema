@@ -63,12 +63,12 @@ description: A citation or citations for the entry, to be provided should it be 
 from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
 rank: 1000
 slot_uri: dcmitype:BibliographicReference
-multivalued: true
 alias: citations
 domain_of:
 - Extractor
 range: Citation
 required: false
+multivalued: true
 
 ```
 

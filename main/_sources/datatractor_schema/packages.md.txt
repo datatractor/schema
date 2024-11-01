@@ -62,12 +62,12 @@ description: A list of packages, including versioned packages or `git+https://` 
   to be installed using the Installer.
 from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
 rank: 1000
-multivalued: true
 alias: packages
 owner: Installation
 domain_of:
 - Installation
 range: string
+multivalued: true
 
 ```
 

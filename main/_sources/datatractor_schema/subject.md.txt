@@ -64,12 +64,12 @@ description: Any keywords, phrases or classification codes that are relevant to 
 from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
 rank: 1000
 slot_uri: dc_terms:subject
-multivalued: true
 alias: subject
 domain_of:
 - Extractor
 - FileType
 range: string
+multivalued: true
 
 ```
 

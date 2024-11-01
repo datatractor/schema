@@ -62,12 +62,12 @@ description: A list of any instruments, or classes of instruments, that typicall
   create the data encoded into this `FileType`.
 from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
 rank: 1000
-multivalued: true
 alias: associated_instruments
 owner: FileType
 domain_of:
 - FileType
 range: string
+multivalued: true
 
 ```
 
