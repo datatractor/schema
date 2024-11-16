@@ -165,7 +165,7 @@ classes:
                       The templated parameters which can be requested from the user
                       are [described by the `UsageTemplate` class](UsageTemplate.md).
             scope:
-                required: false
+                ifabsent: UsageScope(meta+data)
                 range: UsageScope
                 description: >-
                     Specification of extraction scope.
