@@ -59,12 +59,12 @@ name: scope
 description: Specification of extraction scope.
 from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
 rank: 1000
+ifabsent: UsageScope(meta+data)
 alias: scope
 owner: Usage
 domain_of:
 - Usage
 range: UsageScope
-required: false
 
 ```
 

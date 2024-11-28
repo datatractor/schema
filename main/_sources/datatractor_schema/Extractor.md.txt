@@ -81,18 +81,18 @@ SupportedFileType ||--|o UsageTemplate : "template"
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [id](id.md) | 1..1 <br/> [String](String.md) | A unique identifier for the entry within the Datatractor Yard namespace, this<br/>should be a shorthand label rather than a UUID. Only lower-case alphanumeric and<br/>dash ("-") characters are permitted. | direct |
-| [name](name.md) | 1..1 <br/> [String](String.md) | A recognisable name for the entry. | direct |
-| [description](description.md) | 1..1 <br/> [String](String.md) | A human-readable outline of the entry, its format, data content and uses. | direct |
-| [subject](subject.md) | 0..* <br/> [String](String.md) | Any keywords, phrases or classification codes that are relevant to the entry,<br/>e.g., particular scientific domains of applicability, or experimental<br/>techniques. | direct |
-| [citations](citations.md) | 0..* <br/> [Citation](Citation.md) | A citation or citations for the entry, to be provided should it be used in<br/>academic work (or otherwise). | direct |
-| [license](license.md) | 1..1 <br/> [License](License.md) | A URL, URI or SPDX license identifier for a legal document giving official<br/>permission to do something with the resource. | direct |
+| [id](id.md) | 1 <br/> [String](String.md) | A unique identifier for the entry within the Datatractor Yard namespace, this<br/>should be a shorthand label rather than a UUID. Only lower-case alphanumeric and<br/>dash ("-") characters are permitted. | direct |
+| [name](name.md) | 1 <br/> [String](String.md) | A recognisable name for the entry. | direct |
+| [description](description.md) | 1 <br/> [String](String.md) | A human-readable outline of the entry, its format, data content and uses. | direct |
+| [subject](subject.md) | * <br/> [String](String.md) | Any keywords, phrases or classification codes that are relevant to the entry,<br/>e.g., particular scientific domains of applicability, or experimental<br/>techniques. | direct |
+| [citations](citations.md) | * <br/> [Citation](Citation.md) | A citation or citations for the entry, to be provided should it be used in<br/>academic work (or otherwise). | direct |
+| [license](license.md) | 1 <br/> [License](License.md) | A URL, URI or SPDX license identifier for a legal document giving official<br/>permission to do something with the resource. | direct |
 | [supported_filetypes](supported_filetypes.md) | 1..* <br/> [SupportedFileType](SupportedFileType.md) | An enumeration of the `FileType` that an `Extractor` supports, matching<br/>`FileTypes` present in the registry. The `FileType->id` slot can be passed to<br/>the `Extractor`, [see the `Usage` class](Usage.md). | direct |
-| [supported_output_filetypes](supported_output_filetypes.md) | 0..* <br/> [SupportedFileType](SupportedFileType.md) | An enumeration of the possible output formats of an `Extractor`. These should<br/>match `FileTypes` present in the registry. They can be specified on extractor<br/>execution using the templates described in the `Extractor->Usage->command` slot,<br/>[see the `Usage` class](Usage.md). | direct |
+| [supported_output_filetypes](supported_output_filetypes.md) | * <br/> [SupportedFileType](SupportedFileType.md) | An enumeration of the possible output formats of an `Extractor`. These should<br/>match `FileTypes` present in the registry. They can be specified on extractor<br/>execution using the templates described in the `Extractor->Usage->command` slot,<br/>[see the `Usage` class](Usage.md). | direct |
 | [source_repository](source_repository.md) | 0..1 <br/> [String](String.md) | A URL or URI for a source code repository associated with this extractor. | direct |
 | [documentation](documentation.md) | 0..1 <br/> [String](String.md) | A URL or URI for any online documentation associated with this extractor. | direct |
-| [usage](usage.md) | 0..* <br/> [Usage](Usage.md) | A machine-actionable instructions for the usage of the Extractor. The described<br/>usage pattern shall be available after the instructions specified in<br/>`Extractor->installation` slot have been followed. | direct |
-| [installation](installation.md) | 0..* <br/> [Installation](Installation.md) | A machine-actionable set of installation instructions to obtain a working set-up<br/>of the `Extractor`. | direct |
+| [usage](usage.md) | * <br/> [Usage](Usage.md) | A machine-actionable instructions for the usage of the Extractor. The described<br/>usage pattern shall be available after the instructions specified in<br/>`Extractor->installation` slot have been followed. | direct |
+| [installation](installation.md) | * <br/> [Installation](Installation.md) | A machine-actionable set of installation instructions to obtain a working set-up<br/>of the `Extractor`. | direct |
 | [instructions](instructions.md) | 0..1 <br/> [String](String.md) | Any human-readable usage notes or installation instructions for this<br/>`Extractor`. This field is intended for human use only and is not intended to be<br/>machine-actionable. Please use the `Extractor->installation` and<br/>`Extractor->usage` slots for that purpose. | direct |
 
 

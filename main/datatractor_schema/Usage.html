@@ -159,7 +159,7 @@ Usage {
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="method.html"><span class="std std-doc">method</span></a></p></td>
-<td><p>1..1 <br/> <a class="reference internal" href="UsageTypes.html"><span class="std std-doc">UsageTypes</span></a></p></td>
+<td><p>1 <br/> <a class="reference internal" href="UsageTypes.html"><span class="std std-doc">UsageTypes</span></a></p></td>
 <td><p>Usage invocation method, e.g. from a command line or from Python.</p></td>
 <td><p>direct</p></td>
 </tr>
@@ -169,7 +169,7 @@ Usage {
 <td><p>direct</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="command.html"><span class="std std-doc">command</span></a></p></td>
-<td><p>1..1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
+<td><p>1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
 <td><p>A machine-executable command by which the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code> functionality can be<br/>accessed.</p></td>
 <td><p>direct</p></td>
 </tr>
@@ -179,7 +179,7 @@ Usage {
 <td><p>direct</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="supported_filetypes.html"><span class="std std-doc">supported_filetypes</span></a></p></td>
-<td><p>0..* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
+<td><p>* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
 <td><p>An enumeration of the <code class="docutils literal notranslate"><span class="pre">FileType</span></code> that this <code class="docutils literal notranslate"><span class="pre">Usage</span></code> of an <code class="docutils literal notranslate"><span class="pre">Extractor</span></code> supports,<br/>matching one or more of the <code class="docutils literal notranslate"><span class="pre">FileTypes</span></code> present in the <code class="docutils literal notranslate"><span class="pre">supported_filetypes</span></code><br/>slot of the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>. Defaults to all <code class="docutils literal notranslate"><span class="pre">supported_filetypes</span></code> specified in the<br/><code class="docutils literal notranslate"><span class="pre">Extractor</span></code> definition.</p></td>
 <td><p>direct</p></td>
 </tr>
@@ -345,10 +345,10 @@ Usage {
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Specification of extraction scope.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://datatractor.github.io/schema/main/datatractor_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">ifabsent</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UsageScope(meta+data)</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Usage</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UsageScope</span>
-<span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">  </span><span class="nt">supported_filetypes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">supported_filetypes</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An enumeration of the `FileType` that this `Usage` of an `Extractor`</span>
@@ -422,12 +422,12 @@ Usage {
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Specification of extraction scope.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://datatractor.github.io/schema/main/datatractor_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">ifabsent</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UsageScope(meta+data)</span>
 <span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">scope</span>
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Usage</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Usage</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UsageScope</span>
-<span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">  </span><span class="nt">supported_filetypes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">supported_filetypes</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An enumeration of the `FileType` that this `Usage` of an `Extractor`</span>

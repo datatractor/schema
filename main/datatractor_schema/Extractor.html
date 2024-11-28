@@ -186,32 +186,32 @@ SupportedFileType ||--|o UsageTemplate : &quot;template&quot;
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="id.html"><span class="std std-doc">id</span></a></p></td>
-<td><p>1..1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
+<td><p>1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
 <td><p>A unique identifier for the entry within the Datatractor Yard namespace, this<br/>should be a shorthand label rather than a UUID. Only lower-case alphanumeric and<br/>dash (“-”) characters are permitted.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="name.html"><span class="std std-doc">name</span></a></p></td>
-<td><p>1..1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
+<td><p>1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
 <td><p>A recognisable name for the entry.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="description.html"><span class="std std-doc">description</span></a></p></td>
-<td><p>1..1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
+<td><p>1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
 <td><p>A human-readable outline of the entry, its format, data content and uses.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="subject.html"><span class="std std-doc">subject</span></a></p></td>
-<td><p>0..* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
+<td><p>* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
 <td><p>Any keywords, phrases or classification codes that are relevant to the entry,<br/>e.g., particular scientific domains of applicability, or experimental<br/>techniques.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="citations.html"><span class="std std-doc">citations</span></a></p></td>
-<td><p>0..* <br/> <a class="reference internal" href="Citation.html"><span class="std std-doc">Citation</span></a></p></td>
+<td><p>* <br/> <a class="reference internal" href="Citation.html"><span class="std std-doc">Citation</span></a></p></td>
 <td><p>A citation or citations for the entry, to be provided should it be used in<br/>academic work (or otherwise).</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="license.html"><span class="std std-doc">license</span></a></p></td>
-<td><p>1..1 <br/> <a class="reference internal" href="License.html"><span class="std std-doc">License</span></a></p></td>
+<td><p>1 <br/> <a class="reference internal" href="License.html"><span class="std std-doc">License</span></a></p></td>
 <td><p>A URL, URI or SPDX license identifier for a legal document giving official<br/>permission to do something with the resource.</p></td>
 <td><p>direct</p></td>
 </tr>
@@ -221,7 +221,7 @@ SupportedFileType ||--|o UsageTemplate : &quot;template&quot;
 <td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="supported_output_filetypes.html"><span class="std std-doc">supported_output_filetypes</span></a></p></td>
-<td><p>0..* <br/> <a class="reference internal" href="SupportedFileType.html"><span class="std std-doc">SupportedFileType</span></a></p></td>
+<td><p>* <br/> <a class="reference internal" href="SupportedFileType.html"><span class="std std-doc">SupportedFileType</span></a></p></td>
 <td><p>An enumeration of the possible output formats of an <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>. These should<br/>match <code class="docutils literal notranslate"><span class="pre">FileTypes</span></code> present in the registry. They can be specified on extractor<br/>execution using the templates described in the <code class="docutils literal notranslate"><span class="pre">Extractor-&gt;Usage-&gt;command</span></code> slot,<br/><a class="reference internal" href="Usage.html"><span class="std std-doc">see the <code class="docutils literal notranslate"><span class="pre">Usage</span></code> class</span></a>.</p></td>
 <td><p>direct</p></td>
 </tr>
@@ -236,12 +236,12 @@ SupportedFileType ||--|o UsageTemplate : &quot;template&quot;
 <td><p>direct</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="usage.html"><span class="std std-doc">usage</span></a></p></td>
-<td><p>0..* <br/> <a class="reference internal" href="Usage.html"><span class="std std-doc">Usage</span></a></p></td>
+<td><p>* <br/> <a class="reference internal" href="Usage.html"><span class="std std-doc">Usage</span></a></p></td>
 <td><p>A machine-actionable instructions for the usage of the Extractor. The described<br/>usage pattern shall be available after the instructions specified in<br/><code class="docutils literal notranslate"><span class="pre">Extractor-&gt;installation</span></code> slot have been followed.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="installation.html"><span class="std std-doc">installation</span></a></p></td>
-<td><p>0..* <br/> <a class="reference internal" href="Installation.html"><span class="std std-doc">Installation</span></a></p></td>
+<td><p>* <br/> <a class="reference internal" href="Installation.html"><span class="std std-doc">Installation</span></a></p></td>
 <td><p>A machine-actionable set of installation instructions to obtain a working set-up<br/>of the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>.</p></td>
 <td><p>direct</p></td>
 </tr>

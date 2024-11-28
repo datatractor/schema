@@ -35,8 +35,8 @@ Citation {
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
 | [uri](uri.md) | 0..1 <br/> [String](String.md) | An unambiguous reference to the resource within a given context. | direct |
-| [creators](creators.md) | 0..* <br/> [String](String.md) | A list of the creators of the resource. | direct |
-| [contributors](contributors.md) | 0..* <br/> [String](String.md) | A list of the contributors to the resource. | direct |
+| [creators](creators.md) | * <br/> [String](String.md) | A list of the creators of the resource. | direct |
+| [contributors](contributors.md) | * <br/> [String](String.md) | A list of the contributors to the resource. | direct |
 | [title](title.md) | 0..1 <br/> [String](String.md) | A name given to the resource [from DC]. | direct |
 | [type](type.md) | 0..1 <br/> [String](String.md) | Any bibliographic resource type (e.g., article, dataset, software) enumerated in<br/>the DCMI Type Vocabulary. | direct |
 

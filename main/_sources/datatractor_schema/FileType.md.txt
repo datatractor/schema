@@ -39,17 +39,17 @@ FileType ||--}o FileType : "base_formats"
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [id](id.md) | 1..1 <br/> [String](String.md) | A unique identifier for the entry within the Datatractor Yard namespace, this<br/>should be a shorthand label rather than a UUID. Only lower-case alphanumeric and<br/>dash ("-") characters are permitted. | direct |
-| [description](description.md) | 1..1 <br/> [String](String.md) | A human-readable outline of the entry, its format, data content and uses. | direct |
-| [name](name.md) | 1..1 <br/> [String](String.md) | A recognisable name for the entry. | direct |
-| [subject](subject.md) | 0..* <br/> [String](String.md) | Any keywords, phrases or classification codes that are relevant to the entry,<br/>e.g., particular scientific domains of applicability, or experimental<br/>techniques. | direct |
-| [associated_vendors](associated_vendors.md) | 0..* <br/> [String](String.md) | A list of software or instrument vendors that can be associated with this<br/>particular `FileType`. | direct |
-| [associated_instruments](associated_instruments.md) | 0..* <br/> [String](String.md) | A list of any instruments, or classes of instruments, that typically create the<br/>data encoded into this `FileType`. | direct |
-| [associated_software](associated_software.md) | 0..* <br/> [String](String.md) | A list of any known software (proprietary or otherwise) that produces such<br/>`FileType`. | direct |
-| [associated_file_extensions](associated_file_extensions.md) | 0..* <br/> [String](String.md) | A list of any known file extensions that files of this `FileType` are found<br/>with. These may be used as a hint for `FileType` detection. Should omit the<br/>leading `'.'`, e.g. 'json' or 'txt'. | direct |
-| [base_formats](base_formats.md) | 0..* <br/> [FileType](FileType.md) | A list of any particular underlying generic formats which this `FileType` is<br/>based on, e.g., CSV, JSON, HDF5, XML. | direct |
-| [associated_standards](associated_standards.md) | 0..* <br/> [String](String.md) | A list of any particular well-defined file format standards relevant to this<br/>`FileType`, e.g., CIF, NeXus, then it can be listed here. | direct |
-| [registered_extractors](registered_extractors.md) | 0..* <br/> [String](String.md) | A slot for an automatically-generated enumeration of `Extractor` IDs that<br/>support this file type. This slot should be auto-populated by a registry. | direct |
+| [id](id.md) | 1 <br/> [String](String.md) | A unique identifier for the entry within the Datatractor Yard namespace, this<br/>should be a shorthand label rather than a UUID. Only lower-case alphanumeric and<br/>dash ("-") characters are permitted. | direct |
+| [description](description.md) | 1 <br/> [String](String.md) | A human-readable outline of the entry, its format, data content and uses. | direct |
+| [name](name.md) | 1 <br/> [String](String.md) | A recognisable name for the entry. | direct |
+| [subject](subject.md) | * <br/> [String](String.md) | Any keywords, phrases or classification codes that are relevant to the entry,<br/>e.g., particular scientific domains of applicability, or experimental<br/>techniques. | direct |
+| [associated_vendors](associated_vendors.md) | * <br/> [String](String.md) | A list of software or instrument vendors that can be associated with this<br/>particular `FileType`. | direct |
+| [associated_instruments](associated_instruments.md) | * <br/> [String](String.md) | A list of any instruments, or classes of instruments, that typically create the<br/>data encoded into this `FileType`. | direct |
+| [associated_software](associated_software.md) | * <br/> [String](String.md) | A list of any known software (proprietary or otherwise) that produces such<br/>`FileType`. | direct |
+| [associated_file_extensions](associated_file_extensions.md) | * <br/> [String](String.md) | A list of any known file extensions that files of this `FileType` are found<br/>with. These may be used as a hint for `FileType` detection. Should omit the<br/>leading `'.'`, e.g. 'json' or 'txt'. | direct |
+| [base_formats](base_formats.md) | * <br/> [FileType](FileType.md) | A list of any particular underlying generic formats which this `FileType` is<br/>based on, e.g., CSV, JSON, HDF5, XML. | direct |
+| [associated_standards](associated_standards.md) | * <br/> [String](String.md) | A list of any particular well-defined file format standards relevant to this<br/>`FileType`, e.g., CIF, NeXus, then it can be listed here. | direct |
+| [registered_extractors](registered_extractors.md) | * <br/> [String](String.md) | A slot for an automatically-generated enumeration of `Extractor` IDs that<br/>support this file type. This slot should be auto-populated by a registry. | direct |
 
 
 

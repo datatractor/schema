@@ -34,11 +34,11 @@ Usage {
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [method](method.md) | 1..1 <br/> [UsageTypes](UsageTypes.md) | Usage invocation method, e.g. from a command line or from Python. | direct |
+| [method](method.md) | 1 <br/> [UsageTypes](UsageTypes.md) | Usage invocation method, e.g. from a command line or from Python. | direct |
 | [setup](setup.md) | 0..1 <br/> [String](String.md) | Any necessary setup step for the 'command' to become available. | direct |
-| [command](command.md) | 1..1 <br/> [String](String.md) | A machine-executable command by which the `Extractor` functionality can be<br/>accessed. | direct |
+| [command](command.md) | 1 <br/> [String](String.md) | A machine-executable command by which the `Extractor` functionality can be<br/>accessed. | direct |
 | [scope](scope.md) | 0..1 <br/> [UsageScope](UsageScope.md) | Specification of extraction scope. | direct |
-| [supported_filetypes](supported_filetypes.md) | 0..* <br/> [String](String.md) | An enumeration of the `FileType` that this `Usage` of an `Extractor` supports,<br/>matching one or more of the `FileTypes` present in the `supported_filetypes`<br/>slot of the `Extractor`. Defaults to all `supported_filetypes` specified in the<br/>`Extractor` definition. | direct |
+| [supported_filetypes](supported_filetypes.md) | * <br/> [String](String.md) | An enumeration of the `FileType` that this `Usage` of an `Extractor` supports,<br/>matching one or more of the `FileTypes` present in the `supported_filetypes`<br/>slot of the `Extractor`. Defaults to all `supported_filetypes` specified in the<br/>`Extractor` definition. | direct |
 
 
 
@@ -198,10 +198,10 @@ attributes:
     description: Specification of extraction scope.
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
     rank: 1000
+    ifabsent: UsageScope(meta+data)
     domain_of:
     - Usage
     range: UsageScope
-    required: false
   supported_filetypes:
     name: supported_filetypes
     description: An enumeration of the `FileType` that this `Usage` of an `Extractor`
@@ -278,12 +278,12 @@ attributes:
     description: Specification of extraction scope.
     from_schema: https://datatractor.github.io/schema/main/datatractor_schema/
     rank: 1000
+    ifabsent: UsageScope(meta+data)
     alias: scope
     owner: Usage
     domain_of:
     - Usage
     range: UsageScope
-    required: false
   supported_filetypes:
     name: supported_filetypes
     description: An enumeration of the `FileType` that this `Usage` of an `Extractor`

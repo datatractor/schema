@@ -142,57 +142,57 @@ FileType ||--}o FileType : &quot;base_formats&quot;
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="id.html"><span class="std std-doc">id</span></a></p></td>
-<td><p>1..1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
+<td><p>1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
 <td><p>A unique identifier for the entry within the Datatractor Yard namespace, this<br/>should be a shorthand label rather than a UUID. Only lower-case alphanumeric and<br/>dash (“-”) characters are permitted.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="description.html"><span class="std std-doc">description</span></a></p></td>
-<td><p>1..1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
+<td><p>1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
 <td><p>A human-readable outline of the entry, its format, data content and uses.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="name.html"><span class="std std-doc">name</span></a></p></td>
-<td><p>1..1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
+<td><p>1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
 <td><p>A recognisable name for the entry.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="subject.html"><span class="std std-doc">subject</span></a></p></td>
-<td><p>0..* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
+<td><p>* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
 <td><p>Any keywords, phrases or classification codes that are relevant to the entry,<br/>e.g., particular scientific domains of applicability, or experimental<br/>techniques.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="associated_vendors.html"><span class="std std-doc">associated_vendors</span></a></p></td>
-<td><p>0..* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
+<td><p>* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
 <td><p>A list of software or instrument vendors that can be associated with this<br/>particular <code class="docutils literal notranslate"><span class="pre">FileType</span></code>.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="associated_instruments.html"><span class="std std-doc">associated_instruments</span></a></p></td>
-<td><p>0..* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
+<td><p>* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
 <td><p>A list of any instruments, or classes of instruments, that typically create the<br/>data encoded into this <code class="docutils literal notranslate"><span class="pre">FileType</span></code>.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="associated_software.html"><span class="std std-doc">associated_software</span></a></p></td>
-<td><p>0..* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
+<td><p>* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
 <td><p>A list of any known software (proprietary or otherwise) that produces such<br/><code class="docutils literal notranslate"><span class="pre">FileType</span></code>.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="associated_file_extensions.html"><span class="std std-doc">associated_file_extensions</span></a></p></td>
-<td><p>0..* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
+<td><p>* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
 <td><p>A list of any known file extensions that files of this <code class="docutils literal notranslate"><span class="pre">FileType</span></code> are found<br/>with. These may be used as a hint for <code class="docutils literal notranslate"><span class="pre">FileType</span></code> detection. Should omit the<br/>leading <code class="docutils literal notranslate"><span class="pre">'.'</span></code>, e.g. ‘json’ or ‘txt’.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="base_formats.html"><span class="std std-doc">base_formats</span></a></p></td>
-<td><p>0..* <br/> <a class="reference internal" href="#"><span class="std std-doc">FileType</span></a></p></td>
+<td><p>* <br/> <a class="reference internal" href="#"><span class="std std-doc">FileType</span></a></p></td>
 <td><p>A list of any particular underlying generic formats which this <code class="docutils literal notranslate"><span class="pre">FileType</span></code> is<br/>based on, e.g., CSV, JSON, HDF5, XML.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="associated_standards.html"><span class="std std-doc">associated_standards</span></a></p></td>
-<td><p>0..* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
+<td><p>* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
 <td><p>A list of any particular well-defined file format standards relevant to this<br/><code class="docutils literal notranslate"><span class="pre">FileType</span></code>, e.g., CIF, NeXus, then it can be listed here.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="registered_extractors.html"><span class="std std-doc">registered_extractors</span></a></p></td>
-<td><p>0..* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
+<td><p>* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
 <td><p>A slot for an automatically-generated enumeration of <code class="docutils literal notranslate"><span class="pre">Extractor</span></code> IDs that<br/>support this file type. This slot should be auto-populated by a registry.</p></td>
 <td><p>direct</p></td>
 </tr>
