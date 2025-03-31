@@ -49,5 +49,13 @@ supported_filetypes:
           Example Extractor can parse example-filetype once in a blue moon.
       template:
           input_type: example
+supported_output_schemas:
+    - schema:
+          description: >-
+              The fields in the output example extractor follows the JSONSchema linked
+              below.
+          href: >-
+              https://example.com/schema.json
+
 license:
     uri: https://example.com

@@ -77,7 +77,8 @@ classes:
         attributes:
             id:
                 description: >-
-                    A reference to the registered Datatractor `FileType->id` for this file
+                    A reference to the registered Datatractor `FileType->id` for this
+                    file
                     type.
             description:
                 description: Free-text description of caveats or instructions specific
@@ -132,6 +133,34 @@ classes:
                     The `FileType` of the `output_path`, for `Extractors` supporting
                     multiple output `FileTypes`. Defaults to the `FileType->id` for
                     each supported output file type.
+
+    SchemaDescription:
+        description: >-
+            A human-readable schema definition, with a reference to a machine-actionable
+            schema definition if available.
+        attributes:
+            description:
+                description: >-
+                    A human-readable description of the schema and its usage.
+            href:
+                description: >-
+                    A URL or URI for the schema definition.
+
+    OutputSchema:
+        description: >-
+            A human-readable specification of the schema that the output of an `Extractor`.
+        attributes:
+            supported_filetypes:
+                range: SupportedFileType
+                multivalued: true
+                required: false
+                description: >-
+                    The file types that this schema can be used for; defaults to all
+                    if not provided.
+            schema:
+                required: true
+                range: SchemaDescription
+
 
     Usage:
         description: >-
