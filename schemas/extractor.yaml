@@ -59,6 +59,17 @@ classes:
                     These should match `FileTypes` present in the registry. They can
                     be specified on extractor execution using the templates described
                     in the `Extractor->Usage->command` slot, [see the `Usage` class](Usage.md).
+            supported_output_schemas:
+                multivalued: true
+                required: false
+                range: OutputSchema
+                description: >-
+                    A description of the schema that a extractor output can follow;
+                    this may be scoped per file type, or a global schema that works
+                    for all file types.
+                    This should refer to any machine-actionable schema definition,
+                    for example, JSONSchema, XMLSchema, or it may refer to a
+                    self-describing format such as JSON-LD or RDF.
             source_repository:
                 description: >-
                     A URL or URI for a source code repository associated with this
